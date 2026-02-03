@@ -74,16 +74,42 @@
     });
 
 
-    // Portfolio isotope and filter
-    var portfolioIsotope = $('.portfolio-container').isotope({
-        itemSelector: '.portfolio-item',
-        layoutMode: 'fitRows'
-    });
-    $('#portfolio-flters li').on('click', function () {
-        $("#portfolio-flters li").removeClass('active');
-        $(this).addClass('active');
+    // Portfolio isotope and filter - FIXED VERSION
+    $(document).ready(function() {
+        // Initialize Isotope with proper settings
+        var $grid = $('.portfolio-container').isotope({
+            itemSelector: '.portfolio-item',
+            layoutMode: 'masonry',
+            masonry: {
+                columnWidth: '.portfolio-item',
+                gutter: 0
+            },
+            percentPosition: true
+        });
 
-        portfolioIsotope.isotope({filter: $(this).data('filter')});
+        // Force layout after images load
+        $grid.imagesLoaded().progress(function() {
+            $grid.isotope('layout');
+        });
+
+        // Filter functionality
+        $('#portfolio-flters li').on('click', function () {
+            $("#portfolio-flters li").removeClass('active');
+            $(this).addClass('active');
+            
+            var filterValue = $(this).data('filter');
+            $grid.isotope({ filter: filterValue });
+            
+            // Force layout refresh
+            setTimeout(function() {
+                $grid.isotope('layout');
+            }, 300);
+        });
+
+        // Final layout refresh to ensure all items show
+        setTimeout(function() {
+            $grid.isotope('layout');
+        }, 1000);
     });
     
 })(jQuery);
