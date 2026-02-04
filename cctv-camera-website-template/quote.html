@@ -118,12 +118,12 @@
     <!-- Page Header Start -->
     <div class="container-fluid page-header py-5">
         <div class="container py-5">
-            <h1 class="display-3 text-white mb-3 animated slideInDown">Free Quote</h1>
+            <h1 class="display-3 text-white mb-3 animated slideInDown">Get Quote</h1>
             <nav aria-label="breadcrumb animated slideInDown">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a class="text-white" href="index.html">Home</a></li>
                     <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
-                    <li class="breadcrumb-item text-white active" aria-current="page">Free Quote</li>
+                    <li class="breadcrumb-item text-white active" aria-current="page">Quote</li>
                 </ol>
             </nav>
         </div>
@@ -143,32 +143,74 @@
                 <div class="col-lg-6 quote-text py-5 wow fadeIn" data-wow-delay="0.5s">
                     <div class="p-lg-5 pe-lg-0">
                         <div class="bg-primary mb-3" style="width: 60px; height: 2px;"></div>
-                        <h1 class="display-5 mb-5">Free Quote</h1>
-                        <p class="mb-4 pb-2">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo erat amet</p>
+                        <h1 class="display-5 mb-5">Get Your CCTV Quote</h1>
+                        <p class="mb-4 pb-2">Get a customized quote for CCTV camera rental or installation services. Fill out the form below and our experts will contact you with a detailed proposal.</p>
                         <form>
                             <div class="row g-3">
                                 <div class="col-12 col-sm-6">
-                                    <input type="text" class="form-control border-0" placeholder="Your Name" style="height: 55px;">
+                                    <input type="text" class="form-control border-0" placeholder="Your Name" style="height: 55px;" required>
                                 </div>
                                 <div class="col-12 col-sm-6">
-                                    <input type="email" class="form-control border-0" placeholder="Your Email" style="height: 55px;">
+                                    <input type="email" class="form-control border-0" placeholder="Your Email" style="height: 55px;" required>
                                 </div>
                                 <div class="col-12 col-sm-6">
-                                    <input type="text" class="form-control border-0" placeholder="Your Mobile" style="height: 55px;">
+                                    <input type="text" class="form-control border-0" placeholder="Your Mobile" style="height: 55px;" required>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <select class="form-select border-0" style="height: 55px;" required>
+                                        <option value="">Service Type</option>
+                                        <option value="rental">Equipment Rental</option>
+                                        <option value="installation">Custom Installation</option>
+                                        <option value="both">Rental & Installation</option>
+                                        <option value="consultation">Consultation Only</option>
+                                    </select>
                                 </div>
                                 <div class="col-12 col-sm-6">
                                     <select class="form-select border-0" style="height: 55px;">
-                                        <option selected>Select A Service</option>
-                                        <option value="1">Service 1</option>
-                                        <option value="2">Service 2</option>
-                                        <option value="3">Service 3</option>
+                                        <option value="">Camera Type (Optional)</option>
+                                        <option value="dome">Dome Cameras</option>
+                                        <option value="bullet">Bullet Cameras</option>
+                                        <option value="ptz">PTZ Cameras</option>
+                                        <option value="ip">IP Network Cameras</option>
+                                        <option value="wireless">Wireless Cameras</option>
+                                        <option value="dvr">DVR/NVR Systems</option>
+                                        <option value="multiple">Multiple Types</option>
                                     </select>
                                 </div>
-                                <div class="col-12">
-                                    <textarea class="form-control border-0" placeholder="Special Note"></textarea>
+                                <div class="col-12 col-sm-6">
+                                    <select class="form-select border-0" style="height: 55px;">
+                                        <option value="">Project Size</option>
+                                        <option value="small">Small (1-4 cameras)</option>
+                                        <option value="medium">Medium (5-15 cameras)</option>
+                                        <option value="large">Large (16-50 cameras)</option>
+                                        <option value="enterprise">Enterprise (50+ cameras)</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <input type="text" class="form-control border-0" placeholder="Rental Duration (if applicable)" style="height: 55px;">
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <input type="text" class="form-control border-0" placeholder="Budget Range (Optional)" style="height: 55px;">
                                 </div>
                                 <div class="col-12">
-                                    <button class="btn btn-primary w-100 py-3" type="submit">Get A Free Quote</button>
+                                    <textarea class="form-control border-0" placeholder="Project Details: Describe your security requirements, location type, specific features needed, installation preferences, etc." rows="4"></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-check mb-3">
+                                        <input class="form-check-input" type="checkbox" id="urgentQuote">
+                                        <label class="form-check-label" for="urgentQuote">
+                                            Urgent Quote (Response within 24 hours)
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn btn-primary w-100 py-3" type="submit">Get Your Free Quote</button>
+                                </div>
+                                <div class="col-12 text-center mt-3">
+                                    <small class="text-muted">
+                                        <i class="fas fa-shield-alt text-primary me-1"></i>
+                                        Your information is secure and will only be used for quote preparation
+                                    </small>
                                 </div>
                             </div>
                         </form>
