@@ -597,6 +597,15 @@ body {
         flex: 0 0 50% !important;
         max-width: 50% !important;
     }
+    
+    /* Hide overlay on tablet */
+    .portfolio-text {
+        display: none !important;
+    }
+    
+    .portfolio-inner:hover .portfolio-text {
+        display: none !important;
+    }
 }
 
 /* Mobile - 1 column */
@@ -604,6 +613,24 @@ body {
     .portfolio-container .col-lg-4 {
         flex: 0 0 100% !important;
         max-width: 100% !important;
+    }
+    
+    /* Hide overlay completely on mobile */
+    .portfolio-text {
+        display: none !important;
+    }
+    
+    .portfolio-inner:hover .portfolio-text {
+        display: none !important;
+    }
+    
+    /* Ensure no hover effects on mobile */
+    .portfolio-inner:hover {
+        transform: none;
+    }
+    
+    .portfolio-inner:hover img {
+        transform: none;
     }
 }
 
@@ -672,7 +699,7 @@ body {
     color: var(--primary);
 }
 
-/* Portfolio Overlay */
+/* Portfolio Overlay - Desktop Only */
 .portfolio-text {
     position: absolute;
     width: 100%;
@@ -683,11 +710,20 @@ body {
     text-align: center;
     opacity: 0;
     transition: all 0.5s ease;
+    pointer-events: none;
 }
 
-.portfolio-inner:hover .portfolio-text {
-    bottom: 0;
-    opacity: 1;
+/* Only show overlay on hover for desktop devices */
+@media (min-width: 992px) {
+    .portfolio-inner:hover .portfolio-text {
+        bottom: 0;
+        opacity: 1;
+        pointer-events: auto;
+    }
+    
+    .portfolio-text {
+        pointer-events: auto;
+    }
 }
 
 .portfolio-text p {
@@ -764,12 +800,19 @@ body {
         margin-bottom: 25px;
     }
     
+    .portfolio-inner {
+        position: relative;
+        overflow: hidden;
+    }
+    
     .portfolio-inner img {
         height: 200px;
     }
     
     .portfolio-inner .text-center {
         padding: 15px 12px;
+        position: relative;
+        z-index: 1;
     }
     
     .portfolio-inner .text-center h5 {
@@ -779,6 +822,13 @@ body {
     
     .portfolio-inner .text-center p {
         font-size: 13px;
+    }
+    
+    /* Ensure overlay is completely hidden on mobile */
+    .portfolio-text {
+        display: none !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
     }
 }
 

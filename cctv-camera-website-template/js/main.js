@@ -91,6 +91,93 @@
             }
         });
     });
+
+    // Product Search Functionality
+    $(document).ready(function() {
+        // Search functionality
+        $('#productSearch').on('input', function() {
+            var searchTerm = $(this).val().toLowerCase();
+            var visibleCount = 0;
+            
+            $('.service-item').each(function() {
+                var productName = $(this).find('h4').text().toLowerCase();
+                var productDesc = $(this).find('p').text().toLowerCase();
+                
+                if (productName.includes(searchTerm) || productDesc.includes(searchTerm)) {
+                    $(this).parent().show();
+                    visibleCount++;
+                } else {
+                    $(this).parent().hide();
+                }
+            });
+            
+            // Show/hide "no results" message
+            if (visibleCount === 0 && searchTerm !== '') {
+                if ($('#noResults').length === 0) {
+                    $('.tab-content').append('<div id="noResults" class="text-center py-5"><h5 class="text-muted">No products found matching "' + searchTerm + '"</h5><p class="text-muted">Try searching with different keywords</p></div>');
+                }
+            } else {
+                $('#noResults').remove();
+            }
+        });
+
+        // Clear search button
+        $('#clearSearch').on('click', function() {
+            $('#productSearch').val('');
+            $('.service-item').parent().show();
+            $('#noResults').remove();
+        });
+
+        // Populate All Products tab when clicked
+        $('#all-tab').on('click', function() {
+            populateAllProducts();
+        });
+
+        function populateAllProducts() {
+            var allProductsContainer = $('#allProductsContainer');
+            allProductsContainer.empty();
+            
+            // Clone all products from other tabs
+            $('.tab-pane .service-item').each(function() {
+                var clonedProduct = $(this).parent().clone();
+                allProductsContainer.append(clonedProduct);
+            });
+        }
+
+        // Auto-populate on page load if All Products tab is active
+        if ($('#all-tab').hasClass('active')) {
+            populateAllProducts();
+        }
+    });
+
+    // Load product cards from feature.html into homepage container
+    if ($('#homeProductsContainer').length) {
+        $.get('feature.html', function(data) {
+            try {
+                var html = $(data);
+                // select product card columns from product-tabContent
+                var items = html.find('#product-tabContent .tab-pane .col-lg-4');
+                var container = $('#homeProductsContainer');
+                container.empty();
+                var used = {};
+                var count = 0;
+                // pick first 3 unique products for homepage
+                items.each(function() {
+                    if (count >= 3) return;
+                    var title = $(this).find('h4, h5').first().text().trim();
+                    if (!title) title = 'product-' + count;
+                    if (used[title]) return;
+                    used[title] = true;
+                    var clone = $(this).clone();
+                    // ensure the cloned column preserves responsive classes
+                    container.append(clone);
+                    count++;
+                });
+            } catch (err) {
+                console.error('Error loading products into home page:', err);
+            }
+        });
+    }
     
 })(jQuery);
 
