@@ -560,38 +560,99 @@ body {
     cursor: pointer;
     transition: .5s;
     border-bottom: 2px solid transparent;
+    padding: 8px 15px;
+    margin: 0 5px;
+    border-radius: 25px;
 }
 
 #portfolio-flters li:hover,
 #portfolio-flters li.active {
     color: var(--primary);
     border-color: var(--primary);
+    background-color: rgba(212, 160, 23, 0.1);
+}
+
+/* Portfolio Container - Clean Bootstrap Grid */
+.portfolio-container {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.portfolio-item {
+    padding: 15px;
+    margin-bottom: 0;
+    opacity: 1;
+    visibility: visible;
+    display: block;
+    transform: none;
+    position: relative;
+    transition: all 0.3s ease;
 }
 
 .portfolio-inner {
     position: relative;
     overflow: hidden;
-    box-shadow: 0 0 15px rgba(0, 0, 0, .07);
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.portfolio-inner:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(212, 160, 23, 0.15);
 }
 
 .portfolio-inner img {
-    transition: .5s;
     width: 100%;
-    height: auto;
+    height: 280px;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.5s ease;
     display: block;
 }
 
 .portfolio-inner:hover img {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
-.portfolio-inner .portfolio-text {
+/* Portfolio Content */
+.portfolio-inner .text-center {
+    padding: 25px 20px;
+    background-color: var(--card-bg);
+}
+
+.portfolio-inner .text-center p {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: var(--primary);
+}
+
+.portfolio-inner .text-center h5 {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: 0;
+    color: var(--dark);
+    transition: color 0.3s ease;
+}
+
+.portfolio-inner:hover .text-center h5 {
+    color: var(--primary);
+}
+
+/* Portfolio Overlay */
+.portfolio-text {
     position: absolute;
     width: 100%;
     left: 0;
-    bottom: -50px;
+    bottom: -100%;
+    background: linear-gradient(rgba(42, 42, 42, 0.9), rgba(42, 42, 42, 0.95));
+    padding: 25px 20px;
+    text-align: center;
     opacity: 0;
-    transition: .5s;
+    transition: all 0.5s ease;
 }
 
 .portfolio-inner:hover .portfolio-text {
@@ -599,356 +660,155 @@ body {
     opacity: 1;
 }
 
-/* Ensure portfolio items are visible and properly aligned */
-.portfolio-item {
-    margin-bottom: 30px;
-    opacity: 1 !important;
-    visibility: visible !important;
-    display: block !important;
-    transform: none !important;
-    position: relative !important;
+.portfolio-text p {
+    color: rgba(255, 255, 255, 0.8) !important;
+    margin-bottom: 15px;
+    font-size: 14px;
 }
 
-.portfolio-container {
-    overflow: visible;
-    display: flex !important;
-    flex-wrap: wrap !important;
+.portfolio-text h5 {
+    color: white !important;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 600;
 }
 
-/* Force immediate visibility for first 3 items */
-.portfolio-item.first {
-    opacity: 1 !important;
-    visibility: visible !important;
-    display: block !important;
-    position: relative !important;
+.portfolio-text .btn {
+    width: 40px;
+    height: 40px;
+    margin: 0 5px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
 }
 
-/* Bootstrap grid fix - Force 3 columns layout for desktop */
-.portfolio-container .col-lg-4 {
-    flex: 0 0 33.333333% !important;
-    max-width: 33.333333% !important;
-    min-height: 400px;
-    padding: 2px;
+.portfolio-text .btn:hover {
+    transform: scale(1.1);
 }
 
-/* Enhanced Mobile responsive adjustments */
-@media (max-width: 575.98px) {
-    /* Container adjustments for mobile */
-    .container-xxl {
-        padding-left: 15px !important;
-        padding-right: 15px !important;
-    }
-    
-    .portfolio-container {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        gap: 8px !important;
-        margin: 0 !important;
-    }
-    
-    .portfolio-container .col-12 {
-        width: 100% !important;
-        max-width: 100% !important;
-        flex: none !important;
-        padding: 0 !important;
-        margin-bottom: 0 !important;
-    }
-    
+/* Responsive Design */
+@media (max-width: 1199.98px) {
     .portfolio-item {
-        width: 100% !important;
-        margin-bottom: 0 !important;
-        display: block !important;
-        position: relative !important;
+        padding: 10px;
     }
     
-    .portfolio-inner {
-        margin-bottom: 0;
-        box-shadow: 0 0 20px rgba(0, 0, 0, .1);
-        border-radius: 8px;
-        overflow: hidden;
-        background: #fff;
-        position: relative;
+    .portfolio-inner img {
+        height: 250px;
     }
     
-    /* Enable hover effects on mobile by showing on tap/touch */
-    .portfolio-inner:hover .portfolio-text,
-    .portfolio-inner:active .portfolio-text,
-    .portfolio-inner:focus .portfolio-text {
-        bottom: 0 !important;
-        opacity: 1 !important;
-    }
-    
-    /* Adjust filter buttons for mobile */
-    #portfolio-flters {
-        text-align: center;
-        margin-bottom: 25px !important;
-        padding: 0 10px;
-    }
-    
-    #portfolio-flters li {
-        display: inline-block;
-        margin: 3px 6px !important;
-        font-size: 13px;
-        padding: 6px 10px;
-        border-radius: 20px;
-        white-space: nowrap;
-    }
-    
-    /* Mobile heading adjustments */
-    .display-5 {
-        font-size: 1.8rem !important;
-        line-height: 1.3 !important;
-        margin-bottom: 25px !important;
-    }
-    
-    /* Mobile page header */
-    .page-header h1 {
-        font-size: 2.2rem !important;
-        line-height: 1.2 !important;
-    }
-    
-    /* Improve mobile text readability */
     .portfolio-inner .text-center {
-        padding: 12px !important;
+        padding: 20px 15px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .portfolio-inner img {
+        height: 220px;
     }
     
-    .portfolio-inner .text-center p {
-        font-size: 14px;
-        margin-bottom: 6px !important;
+    .portfolio-inner .text-center {
+        padding: 18px 15px;
     }
     
     .portfolio-inner .text-center h5 {
         font-size: 16px;
-        line-height: 1.4;
-        margin-bottom: 0 !important;
     }
     
-    /* Portfolio text overlay adjustments */
-    .portfolio-text {
-        padding: 12px !important;
+    #portfolio-flters {
+        text-align: center;
+        margin-bottom: 30px;
     }
     
-    .portfolio-text h5 {
-        font-size: 15px !important;
-        line-height: 1.4 !important;
-        margin-bottom: 12px !important;
-    }
-    
-    .portfolio-text p {
-        font-size: 13px !important;
-        margin-bottom: 6px !important;
-    }
-    
-    /* Mobile button spacing and sizing */
-    .portfolio-text .btn {
-        margin: 0 3px;
-        width: 35px;
-        height: 35px;
+    #portfolio-flters li {
+        margin: 5px;
+        padding: 6px 12px;
         font-size: 14px;
     }
 }
 
-/* Enhanced Small tablets responsiveness */
-@media (min-width: 576px) and (max-width: 767.98px) {
-    .portfolio-container {
-        gap: 5px !important;
-    }
-    
-    .portfolio-container .col-sm-6 {
-        flex: 0 0 calc(50% - 2.5px) !important;
-        max-width: calc(50% - 2.5px) !important;
-        padding: 0 !important;
-    }
-    
+@media (max-width: 767.98px) {
     .portfolio-item {
-        margin-bottom: 0;
+        padding: 8px;
     }
     
-    .portfolio-inner {
-        border-radius: 6px;
-        overflow: hidden;
+    .portfolio-inner img {
+        height: 200px;
     }
     
-    /* Ensure hover animation works on tablets */
-    .portfolio-inner:hover .portfolio-text {
-        bottom: 0 !important;
-        opacity: 1 !important;
+    .portfolio-inner .text-center {
+        padding: 15px 12px;
     }
     
-    #portfolio-flters li {
-        margin: 3px 5px !important;
-        font-size: 14px;
-    }
-    
-    /* Adjust text for small tablets */
     .portfolio-inner .text-center h5 {
         font-size: 15px;
         line-height: 1.3;
     }
+    
+    .portfolio-inner .text-center p {
+        font-size: 13px;
+    }
 }
 
-/* Enhanced Medium tablets responsiveness */
-@media (min-width: 768px) and (max-width: 991.98px) {
+@media (max-width: 575.98px) {
     .portfolio-container {
-        gap: 3px !important;
-    }
-    
-    .portfolio-container .col-md-6 {
-        flex: 0 0 calc(50% - 1.5px) !important;
-        max-width: calc(50% - 1.5px) !important;
-        padding: 0 !important;
+        margin-left: 0;
+        margin-right: 0;
     }
     
     .portfolio-item {
-        margin-bottom: 0;
+        padding: 5px 0;
+        margin-bottom: 15px;
     }
     
     .portfolio-inner {
-        border-radius: 4px;
-        overflow: hidden;
+        border-radius: 8px;
+        margin: 0 15px;
     }
     
-    /* Ensure hover animation works on medium tablets */
-    .portfolio-inner:hover .portfolio-text {
-        bottom: 0 !important;
-        opacity: 1 !important;
-    }
-}
-
-/* Large screens optimization */
-@media (min-width: 1200px) {
-    .portfolio-container .col-lg-4 {
-        padding: 2px !important;
-    }
-}
-
-/* Reduce spacing between portfolio items */
-.portfolio-container.row {
-    margin-left: 0px;
-    margin-right: 0px;
-}
-
-/* General portfolio item styles */
-.portfolio-item {
-    margin-bottom: 1px;
-    opacity: 1 !important;
-    visibility: visible !important;
-    display: block !important;
-    transform: none !important;
-    position: relative !important;
-}
-
-/* Enhanced responsive adjustments for all mobile and tablet sizes */
-@media (max-width: 991.98px) {
-    /* Ensure proper image sizing */
     .portfolio-inner img {
-        width: 100%;
-        height: 250px;
-        object-fit: cover;
-        object-position: center;
+        height: 180px;
     }
     
-    /* Improve hover effects on touch devices */
-    .portfolio-inner:hover .portfolio-text,
-    .portfolio-inner:active .portfolio-text,
-    .portfolio-inner:focus .portfolio-text {
-        bottom: 0 !important;
-        opacity: 1 !important;
-        transition: all 0.3s ease !important;
+    .portfolio-inner .text-center {
+        padding: 12px 10px;
     }
     
-    /* Better touch targets */
-    .portfolio-text .btn {
-        min-height: 40px;
-        min-width: 40px;
-        touch-action: manipulation;
+    .portfolio-inner .text-center h5 {
+        font-size: 14px;
+        line-height: 1.2;
     }
     
-    /* Enable touch interaction for portfolio items */
+    .portfolio-inner .text-center p {
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+    
+    #portfolio-flters {
+        padding: 0 15px;
+        margin-bottom: 25px;
+    }
+    
+    #portfolio-flters li {
+        display: inline-block;
+        margin: 3px;
+        padding: 5px 10px;
+        font-size: 13px;
+        white-space: nowrap;
+    }
+    
+    /* Mobile touch interactions */
     .portfolio-inner {
-        cursor: pointer;
         -webkit-tap-highlight-color: transparent;
     }
     
-    /* Add touch interaction support */
     .portfolio-inner:active {
         transform: scale(0.98);
-        transition: transform 0.1s ease;
-    }
-}
-
-/* Additional mobile-only improvements */
-@media (max-width: 575.98px) {
-    .portfolio-inner img {
-        height: 200px !important;
     }
     
-    /* Improve section padding */
-    .container-xxl.py-5 {
-        padding-top: 3rem !important;
-        padding-bottom: 3rem !important;
-    }
-    
-    /* Ensure hover animation triggers on tap for mobile */
-    .portfolio-inner {
-        -webkit-touch-callout: none;
-        -webkit-user-select: none;
-        -khtml-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-    }
-}
-
-/* Isotope override - force visibility and proper layout */
-.portfolio-container .portfolio-item {
-    width: auto !important;
-    left: auto !important;
-    top: auto !important;
-    position: relative !important;
-    transform: none !important;
-}
-
-/* Ensure proper grid behavior on all devices */
-.portfolio-container {
-    overflow: visible !important;
-}
-
-/* Fix any potential flexbox issues */
-@media (max-width: 575.98px) {
-    .portfolio-container.row {
-        --bs-gutter-x: 0;
-        --bs-gutter-y: 20px;
-        display: flex !important;
-        flex-direction: column !important;
-        margin: 0 !important;
-    }
-    
-    .portfolio-container .portfolio-item {
-        flex: none !important;
-        width: 100% !important;
-        max-width: 100% !important;
-    }
-}
-
-/* Ensure images load properly with proper aspect ratio */
-.portfolio-inner img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    transition: transform 0.3s ease;
-}
-
-/* Prevent layout shifts during image loading */
-.portfolio-inner {
-    aspect-ratio: 4/3;
-    overflow: hidden;
-}
-
-@media (max-width: 575.98px) {
-    .portfolio-inner {
-        aspect-ratio: 16/10;
+    .portfolio-text {
+        display: none; /* Hide overlay on mobile for better UX */
     }
 }
 
