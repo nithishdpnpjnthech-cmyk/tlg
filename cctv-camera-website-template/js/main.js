@@ -74,42 +74,22 @@
     });
 
 
-    // Portfolio isotope and filter - FIXED VERSION
+    // Portfolio filter - Pure CSS Version
     $(document).ready(function() {
-        // Initialize Isotope with proper settings
-        var $grid = $('.portfolio-container').isotope({
-            itemSelector: '.portfolio-item',
-            layoutMode: 'masonry',
-            masonry: {
-                columnWidth: '.portfolio-item',
-                gutter: 0
-            },
-            percentPosition: true
-        });
-
-        // Force layout after images load
-        $grid.imagesLoaded().progress(function() {
-            $grid.isotope('layout');
-        });
-
-        // Filter functionality
+        // Filter functionality without Isotope
         $('#portfolio-flters li').on('click', function () {
             $("#portfolio-flters li").removeClass('active');
             $(this).addClass('active');
             
             var filterValue = $(this).data('filter');
-            $grid.isotope({ filter: filterValue });
             
-            // Force layout refresh
-            setTimeout(function() {
-                $grid.isotope('layout');
-            }, 300);
+            if (filterValue === '*') {
+                $('.portfolio-item').show();
+            } else {
+                $('.portfolio-item').hide();
+                $('.portfolio-item' + filterValue).show();
+            }
         });
-
-        // Final layout refresh to ensure all items show
-        setTimeout(function() {
-            $grid.isotope('layout');
-        }, 1000);
     });
     
 })(jQuery);
