@@ -27,6 +27,66 @@ body {
 .bg-white {
     background-color: var(--lighter-bg) !important;
 }
+/********** Enhanced Section Formatting **********/
+
+/* Consistent Section Padding */
+.py-6 {
+    padding-top: 6rem !important;
+    padding-bottom: 6rem !important;
+}
+
+/* Service Item Refinement */
+.service-item {
+    transition: all .5s ease;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0,0,0,.05);
+}
+
+.service-item:hover {
+    margin-top: -10px;
+    box-shadow: 0 15px 30px rgba(0,0,0,.1);
+}
+
+.service-item .icon-box {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FFFFFF;
+    border-radius: 50%;
+}
+
+/* Heading Styling */
+.section-title {
+    position: relative;
+    display: inline-block;
+    letter-spacing: 1px;
+}
+
+.section-title::after {
+    position: absolute;
+    content: "";
+    width: 45px;
+    height: 3px;
+    bottom: -5px;
+    left: 0;
+    background: var(--primary);
+}
+
+.text-center .section-title::after {
+    left: 50%;
+    margin-left: -22.5px;
+}
+
+/* Button Modernization */
+.btn-primary {
+    color: #000000; /* Better contrast for dark text on yellow */
+    font-weight: 600;
+    padding: 12px 30px;
+    border-radius: 50px;
+}
 
 .bg-dark {
     background-color: var(--dark) !important;
@@ -687,6 +747,11 @@ body {
     box-shadow: 0 15px 35px rgba(212, 160, 23, 0.15);
 }
 
+.portfolio-inner {
+    display: flex;
+    flex-direction: column;
+}
+
 .portfolio-inner img {
     width: 100%;
     height: 280px;
@@ -694,6 +759,8 @@ body {
     object-position: center;
     transition: transform 0.5s ease;
     display: block;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 .portfolio-inner:hover img {
@@ -704,6 +771,10 @@ body {
 .portfolio-inner .text-center {
     padding: 25px 20px;
     background-color: var(--card-bg);
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .portfolio-inner .text-center p {
@@ -809,17 +880,34 @@ body {
         font-size: 16px;
     }
 
-    #portfolio-flters {
-        text-align: center;
-        margin-bottom: 30px;
+    #portfolio-flters li {
+        display: inline-block;
+        margin: 0 5px;
     }
 
-    #portfolio-flters li {
-        margin: 5px;
-        padding: 6px 12px;
-        font-size: 14px;
+    #portfolio-flters .filter-btn {
+        display: inline-block;
+        font-weight: 500;
+        color: var(--dark);
+        cursor: pointer;
+        transition: .25s ease;
+        border: 2px solid transparent;
+        padding: 8px 15px;
+        background: transparent;
+        border-radius: 25px;
     }
-}
+
+    #portfolio-flters .filter-btn:hover,
+    #portfolio-flters .filter-btn.active {
+        color: var(--primary);
+        border-color: var(--primary);
+        background-color: rgba(212, 160, 23, 0.07);
+    }
+
+    #portfolio-flters .filter-btn:focus {
+        outline: 3px solid rgba(212,160,23,0.15);
+        outline-offset: 2px;
+    }
 
 @media (max-width: 767.98px) {
     .portfolio-item {
