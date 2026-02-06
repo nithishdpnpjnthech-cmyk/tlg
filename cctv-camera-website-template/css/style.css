@@ -229,9 +229,9 @@ body {
 }
 
 .navbar .navbar-brand img {
-    height: 25px;
+    height: 50px;
     width: auto;
-    max-width: 100px;
+    max-width: 200px;
     transition: all 0.3s ease;
 }
 
@@ -242,19 +242,19 @@ body {
 /* Responsive logo sizing */
 @media (max-width: 768px) {
     .navbar .navbar-brand img {
-        height: 20px;
-        max-width: 75px;
+        height: 40px;
+        max-width: 150px;
     }
 
     .navbar .navbar-brand {
-        height: 50px;
+        height: 60px;
     }
 }
 
 @media (max-width: 480px) {
     .navbar .navbar-brand img {
-        height: 18px;
-        max-width: 60px;
+        height: 35px;
+        max-width: 120px;
     }
 }
 
@@ -462,7 +462,9 @@ body {
 
 /*** About ***/
 @media (min-width: 992px) {
-    .container.about {
+    .container.abou
+    mim-wi400px;
+    t {
         max-width: 100% !important;
     }
 
@@ -481,6 +483,29 @@ body {
     .about-text {
         padding-right: calc(((100% - 1320px) / 2) + .75rem);
     }
+}
+
+/* Ensure full-bleed images in alternating sections correctly fill their column
+   (fixes collapsed/incorrect image height when parent uses min-height)
+*/
+.container.about .position-relative,
+.container.feature .position-relative,
+.container.quote .position-relative {
+    position: relative;
+    min-height: 400px; /* matches inline HTML fallback */
+    overflow: hidden; /* hide any image bleed and ensure cover works */
+}
+
+.container.about .position-relative img,
+.container.feature .position-relative img,
+.container.quote .position-relative img {
+    position: absolute !important;
+    inset: 0; /* shorthand for top/right/bottom/left:0 */
+    width: 100% !important;
+    height: 100% !important;
+    display: block !important;
+    object-fit: cover;
+    object-position: center center;
 }
 
 
