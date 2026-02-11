@@ -14,7 +14,9 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet"> 
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap"
+        rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -34,7 +36,8 @@
 
 <body>
     <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
             <span class="sr-only">Loading...</span>
         </div>
@@ -96,10 +99,14 @@
                 <a href="contact.html" class="nav-item nav-link">Contacts</a>
             </div>
             <div class="h-100 d-lg-inline-flex align-items-center d-none">
-                <a class="btn btn-square rounded-circle bg-light text-primary me-2" href=""><i class="fab fa-facebook-f"></i></a>
-                <a class="btn btn-square rounded-circle bg-light text-primary me-2" href=""><i class="fab fa-twitter"></i></a>
-                <a class="btn btn-square rounded-circle bg-light text-primary me-2" href=""><i class="fab fa-linkedin-in"></i></a>
-                <a class="btn btn-square rounded-circle bg-light text-primary me-0" href=""><i class="fab fa-instagram"></i></a>
+                <a class="btn btn-square rounded-circle bg-light text-primary me-2" href=""><i
+                        class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-square rounded-circle bg-light text-primary me-2" href=""><i
+                        class="fab fa-twitter"></i></a>
+                <a class="btn btn-square rounded-circle bg-light text-primary me-2" href=""><i
+                        class="fab fa-linkedin-in"></i></a>
+                <a class="btn btn-square rounded-circle bg-light text-primary me-0" href=""><i
+                        class="fab fa-instagram"></i></a>
             </div>
         </div>
     </nav>
@@ -129,60 +136,183 @@
                 <div class="bg-primary mb-3 mx-auto" style="width: 60px; height: 2px;"></div>
                 <h1 class="display-5 mb-5">Our Services</h1>
             </div>
-            <div class="row g-0 service-row">
-                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
+            <div class="row g-4 service-row">
+                <!-- 1. IT Infrastructure -->
+                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.1s">
                     <div class="service-item border h-100 p-5">
                         <div class="service-content">
                             <div class="btn-square bg-light rounded-circle mb-4" style="width: 64px; height: 64px;">
-                                <i class="fas fa-wifi fa-2x text-primary"></i>
+                                <i class="fas fa-server fa-2x text-primary"></i>
                             </div>
                             <div class="service-text">
-                                <h4 class="mb-3">ISP Connections to the Event</h4>
-                                <p class="mb-4">Reliable internet service provider connections for all your event needs with high-speed connectivity</p>
+                                <h4 class="mb-3">IT Infrastructure Solutions</h4>
+                                <p class="mb-4">Complete end-to-end digital workspace integration including device
+                                    provisioning, virtualization, and cloud productivity.</p>
                             </div>
-                            <a class="btn" href=""><i class="fa fa-arrow-right text-white me-3"></i>Read More</a>
+                            <a class="btn" href="service-it-infrastructure.html"><i
+                                    class="fa fa-arrow-right text-white me-3"></i>Read More</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
+
+                <!-- 2. Passive Networking -->
+                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.2s">
                     <div class="service-item border h-100 p-5">
                         <div class="service-content">
                             <div class="btn-square bg-light rounded-circle mb-4" style="width: 64px; height: 64px;">
-                                <i class="fas fa-tools fa-2x text-primary"></i>
+                                <i class="fas fa-ethernet fa-2x text-primary"></i>
                             </div>
                             <div class="service-text">
-                                <h4 class="mb-3">IT Setup and Support</h4>
-                                <p class="mb-4">Complete IT infrastructure setup and ongoing technical support for all your technology needs</p>
+                                <h4 class="mb-3">Passive Networking</h4>
+                                <p class="mb-4">Complete passive networking solutions including structured cabling,
+                                    fiber optics, and network infrastructure setup.</p>
                             </div>
-                            <a class="btn" href=""><i class="fa fa-arrow-right text-white me-3"></i>Read More</a>
+                            <a class="btn" href="service-passive-networking.html"><i
+                                    class="fa fa-arrow-right text-white me-3"></i>Read More</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
+
+                <!-- 3. Active Networking -->
+                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.3s">
                     <div class="service-item border h-100 p-5">
                         <div class="service-content">
                             <div class="btn-square bg-light rounded-circle mb-4" style="width: 64px; height: 64px;">
-                                <i class="fas fa-laptop fa-2x text-primary"></i>
+                                <i class="fas fa-sitemap fa-2x text-primary"></i>
                             </div>
                             <div class="service-text">
-                                <h4 class="mb-3">IT Equipment Rental</h4>
-                                <p class="mb-4">Rent high-quality IT equipment for events, projects, or temporary business needs</p>
+                                <h4 class="mb-3">Active Networking</h4>
+                                <p class="mb-4">High-performance active networking environments delivering secure
+                                    connectivity and operational efficiency.</p>
                             </div>
-                            <a class="btn" href=""><i class="fa fa-arrow-right text-white me-3"></i>Read More</a>
+                            <a class="btn" href="service-active-networking.html"><i
+                                    class="fa fa-arrow-right text-white me-3"></i>Read More</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
+
+                <!-- 4. Surveillance -->
+                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.4s">
                     <div class="service-item border h-100 p-5">
                         <div class="service-content">
                             <div class="btn-square bg-light rounded-circle mb-4" style="width: 64px; height: 64px;">
                                 <i class="fas fa-video fa-2x text-primary"></i>
                             </div>
                             <div class="service-text">
-                                <h4 class="mb-3">CCTV for Events</h4>
-                                <p class="mb-4">Professional CCTV surveillance solutions specifically designed for events and gatherings</p>
+                                <h4 class="mb-3">Surveillance Solutions</h4>
+                                <p class="mb-4">Advanced surveillance solutions including CCTV, NVR/DVR, and intrusion
+                                    alarm systems for enhanced safety.</p>
                             </div>
-                            <a class="btn" href=""><i class="fa fa-arrow-right text-white me-3"></i>Read More</a>
+                            <a class="btn" href="service-surveillance.html"><i
+                                    class="fa fa-arrow-right text-white me-3"></i>Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. LCD Video Walls -->
+                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="service-item border h-100 p-5">
+                        <div class="service-content">
+                            <div class="btn-square bg-light rounded-circle mb-4" style="width: 64px; height: 64px;">
+                                <i class="fas fa-th fa-2x text-primary"></i>
+                            </div>
+                            <div class="service-text">
+                                <h4 class="mb-3">LCD Video Walls</h4>
+                                <p class="mb-4">Complete end-to-end LCD video wall solutions with ultra-narrow bezels
+                                    and custom layout designs.</p>
+                            </div>
+                            <a class="btn" href="service-video-walls.html"><i
+                                    class="fa fa-arrow-right text-white me-3"></i>Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. Auditorium AV Solutions -->
+                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.6s">
+                    <div class="service-item border h-100 p-5">
+                        <div class="service-content">
+                            <div class="btn-square bg-light rounded-circle mb-4" style="width: 64px; height: 64px;">
+                                <i class="fas fa-theater-masks fa-2x text-primary"></i>
+                            </div>
+                            <div class="service-text">
+                                <h4 class="mb-3">Auditorium AV Solutions</h4>
+                                <p class="mb-4">Powerful auditorium environments delivering crystal-clear sound and
+                                    impactful visuals for large-scale events.</p>
+                            </div>
+                            <a class="btn" href="service-auditorium-av.html"><i
+                                    class="fa fa-arrow-right text-white me-3"></i>Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. Streaming Services -->
+                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.7s">
+                    <div class="service-item border h-100 p-5">
+                        <div class="service-content">
+                            <div class="btn-square bg-light rounded-circle mb-4" style="width: 64px; height: 64px;">
+                                <i class="fas fa-stream fa-2x text-primary"></i>
+                            </div>
+                            <div class="service-text">
+                                <h4 class="mb-3">Streaming & Recording</h4>
+                                <p class="mb-4">End-to-end media capture and streaming integration for events,
+                                    conferences, and lectures.</p>
+                            </div>
+                            <a class="btn" href="service-streaming.html"><i
+                                    class="fa fa-arrow-right text-white me-3"></i>Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 8. Live Broadcasting -->
+                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.8s">
+                    <div class="service-item border h-100 p-5">
+                        <div class="service-content">
+                            <div class="btn-square bg-light rounded-circle mb-4" style="width: 64px; height: 64px;">
+                                <i class="fas fa-broadcast-tower fa-2x text-primary"></i>
+                            </div>
+                            <div class="service-text">
+                                <h4 class="mb-3">Live Broadcasting</h4>
+                                <p class="mb-4">High-performance broadcasting environments for seamless live content and
+                                    professional production.</p>
+                            </div>
+                            <a class="btn" href="service-broadcasting.html"><i
+                                    class="fa fa-arrow-right text-white me-3"></i>Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 9. ISP Services -->
+                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.9s">
+                    <div class="service-item border h-100 p-5">
+                        <div class="service-content">
+                            <div class="btn-square bg-light rounded-circle mb-4" style="width: 64px; height: 64px;">
+                                <i class="fas fa-globe fa-2x text-primary"></i>
+                            </div>
+                            <div class="service-text">
+                                <h4 class="mb-3">ISP Services</h4>
+                                <p class="mb-4">Secure, high-performance connectivity solutions including leased lines,
+                                    broadband, and enterprise Wi-Fi.</p>
+                            </div>
+                            <a class="btn" href="service-isp.html"><i class="fa fa-arrow-right text-white me-3"></i>Read
+                                More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 10. Configuration Services -->
+                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="1.0s">
+                    <div class="service-item border h-100 p-5">
+                        <div class="service-content">
+                            <div class="btn-square bg-light rounded-circle mb-4" style="width: 64px; height: 64px;">
+                                <i class="fas fa-tools fa-2x text-primary"></i>
+                            </div>
+                            <div class="service-text">
+                                <h4 class="mb-3">Configuration Services</h4>
+                                <p class="mb-4">High-quality configuration solutions and technology product rentals for
+                                    your entire event.</p>
+                            </div>
+                            <a class="btn" href="service-configuration.html"><i
+                                    class="fa fa-arrow-right text-white me-3"></i>Read More</a>
                         </div>
                     </div>
                 </div>
@@ -190,7 +320,7 @@
         </div>
     </div>
     <!-- Service End -->
-        
+
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-secondary footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s">
@@ -202,10 +332,14 @@
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
                     <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
                     <div class="d-flex pt-2">
-                        <a class="btn btn-square btn-outline-secondary rounded-circle me-2" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-square btn-outline-secondary rounded-circle me-2" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-square btn-outline-secondary rounded-circle me-2" href=""><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-square btn-outline-secondary rounded-circle me-2" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-square btn-outline-secondary rounded-circle me-2" href=""><i
+                                class="fab fa-twitter"></i></a>
+                        <a class="btn btn-square btn-outline-secondary rounded-circle me-2" href=""><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square btn-outline-secondary rounded-circle me-2" href=""><i
+                                class="fab fa-youtube"></i></a>
+                        <a class="btn btn-square btn-outline-secondary rounded-circle me-2" href=""><i
+                                class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
@@ -227,8 +361,10 @@
                     <h5 class="text-light mb-4">Newsletter</h5>
                     <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
                     <div class="position-relative w-100">
-                        <input class="form-control bg-transparent border-secondary w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                        <input class="form-control bg-transparent border-secondary w-100 py-3 ps-4 pe-5" type="text"
+                            placeholder="Your email">
+                        <button type="button"
+                            class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
                     </div>
                 </div>
             </div>
@@ -255,7 +391,8 @@
 
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
+            class="bi bi-arrow-up"></i></a>
 
 
     <!-- JavaScript Libraries -->
