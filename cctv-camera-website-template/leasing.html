@@ -3,10 +3,10 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Product Leasing - TLG INFOTECH</title>
+    <title>Leasing - IT Hardware Leasing Services - TLG INFOTECH</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+    <meta content="IT hardware leasing, laptop rental, enterprise equipment leasing, short-term leasing" name="keywords">
+    <meta content="Flexible IT hardware leasing and rental solutions including laptops, servers, networking, NVRs, and full technical support." name="description">
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
@@ -14,9 +14,7 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -32,377 +30,17 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-
-    <style>
-        /* Clean Professional Color Palette */
-        :root {
-            --tlg-orange: #FF6B35;
-            --tlg-orange-light: #FF8C5A;
-            --dark-gray: #2C3E50;
-            --medium-gray: #6B7280;
-            --light-gray: #F8F9FA;
-            --white: #FFFFFF;
-            --border: #E5E7EB;
-            --success: #10B981;
-        }
-
-        /* Typography */
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            color: var(--dark-gray);
-            line-height: 1.6;
-        }
-
-        /* Hero Section */
-        .hero-section {
-            background: var(--dark-gray);
-            padding: 80px 0;
-            color: white;
-            text-align: center;
-        }
-
-        .hero-section h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-        }
-
-        .hero-section p {
-            font-size: 1.2rem;
-            max-width: 600px;
-            margin: 0 auto;
-            opacity: 0.9;
-        }
-
-        /* Product Cards */
-        .product-card {
-            background: var(--white);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 24px;
-            margin-bottom: 30px;
-            height: 100%;
-            transition: box-shadow 0.3s ease;
-        }
-
-        .product-card:hover {
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        }
-
-        .product-image {
-            width: 100%;
-            height: 250px;
-            background: var(--white);
-            border: 1px solid var(--border);
-            border-radius: 6px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 20px;
-            padding: 15px;
-            box-sizing: border-box;
-        }
-
-        .product-image img {
-            max-width: 100%;
-            max-height: 100%;
-            width: auto;
-            height: auto;
-            object-fit: contain;
-            border-radius: 4px;
-        }
-
-        .product-title {
-            color: var(--dark-gray);
-            font-size: 1.2rem;
-            font-weight: 600;
-            margin-bottom: 15px;
-            line-height: 1.4;
-        }
-
-        .product-description {
-            color: var(--medium-gray);
-            font-size: 0.95rem;
-            line-height: 1.6;
-            margin-bottom: 20px;
-            text-align: justify;
-        }
-
-        .price-tag {
-            background: var(--success);
-            color: white;
-            padding: 6px 12px;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            display: inline-block;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-        }
-
-        .btn-lease {
-            background: var(--tlg-orange);
-            color: white;
-            border: none;
-            padding: 12px 24px;
-            border-radius: 5px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            display: inline-block;
-            width: auto;
-            text-align: center;
-            text-decoration: none;
-            box-sizing: border-box;
-        }
-
-        .btn-lease:hover {
-            background: var(--tlg-orange-light);
-            color: white;
-            text-decoration: none;
-        }
-
-        /* Section Headers */
-        .category-header {
-            text-align: center;
-            margin: 60px 0 40px 0;
-        }
-
-        .category-title {
-            color: var(--dark-gray);
-            font-size: 2.2rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
-
-        .category-desc {
-            color: var(--medium-gray);
-            font-size: 1.1rem;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .section-divider {
-            height: 2px;
-            background: var(--tlg-orange);
-            width: 60px;
-            margin: 20px auto;
-            border-radius: 1px;
-        }
-
-        /* Container Styling */
-        .container-fluid.py-6 {
-            padding: 60px 0;
-        }
-
-        .py-6.bg-light {
-            background: var(--light-gray);
-        }
-
-        /* Contact Section */
-        .contact-section {
-            background: var(--dark-gray);
-            padding: 60px 0;
-            color: white;
-            text-align: center;
-        }
-
-        .contact-section h2 {
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-
-        .contact-section p {
-            font-size: 1.1rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-        }
-
-        .btn-contact-primary {
-            background: var(--tlg-orange);
-            color: white;
-            padding: 12px 24px;
-            border: none;
-            border-radius: 5px;
-            font-weight: 600;
-            text-decoration: none;
-            display: inline-block;
-            margin-right: 15px;
-        }
-
-        .btn-contact-primary:hover {
-            background: var(--tlg-orange-light);
-            color: white;
-        }
-
-        .btn-contact-secondary {
-            background: transparent;
-            color: var(--tlg-orange);
-            border: 2px solid var(--tlg-orange);
-            padding: 12px 24px;
-            border-radius: 5px;
-            font-weight: 600;
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .btn-contact-secondary:hover {
-            background: var(--tlg-orange);
-            color: white;
-        }
-
-        /* Mobile Responsiveness */
-        @media (max-width: 768px) {
-            .hero-section {
-                padding: 60px 0;
-            }
-
-            .hero-section h1 {
-                font-size: 2.2rem;
-            }
-
-            .hero-section p {
-                font-size: 1rem;
-                padding: 0 20px;
-            }
-
-            .category-title {
-                font-size: 1.8rem;
-            }
-
-            .category-desc {
-                font-size: 1rem;
-                padding: 0 20px;
-            }
-
-            .product-card {
-                padding: 20px;
-                margin-bottom: 25px;
-            }
-
-            .product-image {
-                height: 200px;
-                padding: 12px;
-            }
-
-            .product-title {
-                font-size: 1.1rem;
-                margin-bottom: 12px;
-            }
-
-            .product-description {
-                font-size: 0.9rem;
-                margin-bottom: 18px;
-            }
-
-            .btn-lease {
-                padding: 14px 24px;
-                font-size: 0.85rem;
-            }
-
-            .container-fluid.py-6 {
-                padding: 40px 0;
-            }
-
-            .category-header {
-                margin: 40px 0 30px 0;
-            }
-
-            .contact-section {
-                padding: 40px 0;
-            }
-
-            .contact-section h2 {
-                font-size: 1.8rem;
-            }
-
-            .btn-contact-primary,
-            .btn-contact-secondary {
-                display: block;
-                width: 200px;
-                margin: 10px auto;
-                text-align: center;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero-section h1 {
-                font-size: 1.9rem;
-            }
-
-            .category-title {
-                font-size: 1.6rem;
-            }
-
-            .product-image {
-                height: 180px;
-                padding: 10px;
-            }
-
-            .product-card {
-                padding: 16px;
-                margin-bottom: 20px;
-            }
-
-            .btn-lease {
-                width: 100%;
-                display: block;
-            }
-
-            .product-title {
-                font-size: 1rem;
-                margin-bottom: 10px;
-            }
-
-            .product-description {
-                font-size: 0.85rem;
-                margin-bottom: 15px;
-            }
-
-            .btn-lease {
-                padding: 12px 20px;
-                font-size: 0.8rem;
-                width: 100%;
-            }
-
-            .price-tag {
-                font-size: 0.75rem;
-                padding: 5px 10px;
-            }
-        }
-
-        /* Remove excessive animations and keep only essential transitions */
-        .product-card {
-            transition: box-shadow 0.2s ease;
-        }
-
-        .btn-lease,
-        .btn-contact-primary,
-        .btn-contact-secondary {
-            transition: background-color 0.2s ease, color 0.2s ease;
-        }
-
-        .btn-lease:focus,
-        .btn-contact-primary:focus,
-        .btn-contact-secondary:focus {
-            outline: 2px solid var(--tlg-orange);
-            outline-offset: 2px;
-        }
-    </style>
 </head>
 
 <body>
     <!-- Spinner Start -->
-    <div id="spinner"
-        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
             <span class="sr-only">Loading...</span>
         </div>
     </div>
     <!-- Spinner End -->
+
 
     <!-- Topbar Start -->
     <div class="container-fluid bg-dark px-5">
@@ -439,6 +77,7 @@
     </div>
     <!-- Topbar End -->
 
+
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top p-0 px-4 px-lg-5">
         <a href="index.html" class="navbar-brand d-flex align-items-center">
@@ -457,556 +96,332 @@
                 <a href="feature.html" class="nav-item nav-link">Products</a>
                 <a href="contact.html" class="nav-item nav-link">Contacts</a>
             </div>
-            <div class="h-100 d-lg-inline-flex align-items-center d-none">
-                <a class="btn btn-square rounded-circle bg-light text-primary me-2" href=""><i
-                        class="fab fa-facebook-f"></i></a>
-                <a class="btn btn-square rounded-circle bg-light text-primary me-2" href=""><i
-                        class="fab fa-twitter"></i></a>
-                <a class="btn btn-square rounded-circle bg-light text-primary me-2" href=""><i
-                        class="fab fa-linkedin-in"></i></a>
-                <a class="btn btn-square rounded-circle bg-light text-primary me-0" href=""><i
-                        class="fab fa-instagram"></i></a>
-            </div>
         </div>
     </nav>
     <!-- Navbar End -->
 
-    <!-- Hero Section -->
-    <div class="hero-section">
-        <div class="container">
-            <h1 class="display-4 mb-4">Product Leasing</h1>
-            <p class="lead">Professional networking equipment leasing solutions for your business needs</p>
+
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header py-5 mb-5">
+        <div class="container py-5">
+            <h1 class="display-3 text-white mb-3 animated slideInDown">IT Hardware Leasing Services</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a class="text-white" href="index.html">Home</a></li>
+                    <li class="breadcrumb-item text-white active" aria-current="page">Leasing</li>
+                </ol>
+            </nav>
         </div>
     </div>
+    <!-- Page Header End -->
 
-    <!-- Routers & Core Equipment Section -->
-    <div class="container-fluid py-6">
+
+    <!-- Leasing Detail Start -->
+    <div class="container-xxl py-5">
         <div class="container">
-            <div class="category-header">
-                <h2 class="category-title">Enterprise Routers & Core Equipment</h2>
-                <p class="category-desc">High-performance routing solutions for demanding network environments</p>
-                <div class="section-divider"></div>
-            </div>
-
-            <div class="row">
-                <!-- MikroTik CCR2004 -->
-                <div class="col-lg-6 col-md-12 mb-4">
-                    <div class="product-card h-100">
-                        <div class="product-image">
-                            <img src="leasing-product-image/MikroTik CCR2004-1G-12S+2XS.png" alt="MikroTik CCR2004"
-                                style="width: 100%; height: 100%; object-fit: contain; border-radius: 8px;">
+            <div class="row g-5">
+                <div class="col-lg-8 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="service-detail">
+                        <div class="service-img mb-4">
+                            <img class="img-fluid w-100" src="img/service-2.jpg" alt="IT Hardware Leasing">
                         </div>
-                        <div class="price-tag">Lease Available</div>
-                        <h3 class="product-title">MikroTik CCR2004-1G-12S+2XS</h3>
-                        <p class="product-description">
-                            The MikroTik CCR2004-1G-12S+2XS is a high-performance enterprise cloud core router built for
-                            demanding networks.
-                            Designed for ISPs, data centers, and large business environments, it delivers exceptional
-                            routing power,
-                            ultra-fast fiber connectivity, and reliable operation — making it ideal for backbone
-                            aggregation,
-                            high-traffic routing, and scalable infrastructure deployments.
-                        </p>
-                        <button class="btn btn-lease">Request Lease Quote</button>
+                        <h2 class="mb-4">Flexible IT Hardware Leasing</h2>
+                        <p class="mb-4">TLG Infotech offers flexible rental solutions for a wide range of IT and security products to support short-term and long-term business requirements. Our rental portfolio includes network switches, firewalls, servers, computer systems, NVRs, DVRs, and other infrastructure equipment, providing cost-effective, reliable, and quickly deployable solutions with full technical support.</p>
+
+                        <h3 class="mb-3">Business IT hardware leasing, laptop rental, and enterprise equipment solutions</h3>
+                        <p class="mb-4">We provide comprehensive IT equipment leasing — below are common categories and what each includes so you can quickly find the right solution.</p>
+
+                        <div class="row g-4 mb-4">
+                            <div class="col-md-4">
+                                <div class="bg-white p-4 h-100 text-center">
+                                    <div class="btn-square rounded-circle bg-primary text-white mx-auto mb-3" style="width:64px;height:64px;display:flex;align-items:center;justify-content:center;">
+                                        <i class="fas fa-laptop fa-lg"></i>
+                                    </div>
+                                    <h5 class="mb-2">Laptops, Desktops & Workstations</h5>
+                                    <p class="small mb-0">Thin-and-light laptops to high-performance workstations — pre-imaged and ready for users or events.</p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="bg-white p-4 h-100 text-center">
+                                    <div class="btn-square rounded-circle bg-primary text-white mx-auto mb-3" style="width:64px;height:64px;display:flex;align-items:center;justify-content:center;">
+                                        <i class="fas fa-server fa-lg"></i>
+                                    </div>
+                                    <h5 class="mb-2">Servers & Storage Systems</h5>
+                                    <p class="small mb-0">Rack and tower servers, SAN/NAS storage — ideal for development, testing, or temporary production loads.</p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="bg-white p-4 h-100 text-center">
+                                    <div class="btn-square rounded-circle bg-primary text-white mx-auto mb-3" style="width:64px;height:64px;display:flex;align-items:center;justify-content:center;">
+                                        <i class="fas fa-network-wired fa-lg"></i>
+                                    </div>
+                                    <h5 class="mb-2">Networking Equipment</h5>
+                                    <p class="small mb-0">Managed switches, routers and firewalls for secure, reliable enterprise networking — configured to your topology.</p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="bg-white p-4 h-100 text-center">
+                                    <div class="btn-square rounded-circle bg-primary text-white mx-auto mb-3" style="width:64px;height:64px;display:flex;align-items:center;justify-content:center;">
+                                        <i class="fas fa-wifi fa-lg"></i>
+                                    </div>
+                                    <h5 class="mb-2">Wi‑Fi Infrastructure</h5>
+                                    <p class="small mb-0">Access points and controllers for event venues, temporary offices or campus deployments with performance tuning.</p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="bg-white p-4 h-100 text-center">
+                                    <div class="btn-square rounded-circle bg-primary text-white mx-auto mb-3" style="width:64px;height:64px;display:flex;align-items:center;justify-content:center;">
+                                        <i class="fas fa-video fa-lg"></i>
+                                    </div>
+                                    <h5 class="mb-2">AV Equipment for Meetings & Events</h5>
+                                    <p class="small mb-0">Projectors, displays, sound systems and conferencing gear — ready for corporate meetings, training or large events.</p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="bg-white p-4 h-100 text-center">
+                                    <div class="btn-square rounded-circle bg-primary text-white mx-auto mb-3" style="width:64px;height:64px;display:flex;align-items:center;justify-content:center;">
+                                        <i class="fas fa-print fa-lg"></i>
+                                    </div>
+                                    <h5 class="mb-2">Printers & Peripheral Devices</h5>
+                                    <p class="small mb-0">Multi-function printers, scanners and other peripherals for short-term offices or events.</p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="bg-white p-4 h-100 text-center">
+                                    <div class="btn-square rounded-circle bg-primary text-white mx-auto mb-3" style="width:64px;height:64px;display:flex;align-items:center;justify-content:center;">
+                                        <i class="fas fa-toolbox fa-lg"></i>
+                                    </div>
+                                    <h5 class="mb-2">Temporary Project / Event Setups</h5>
+                                    <p class="small mb-0">Turnkey hardware setups for conferences, pop-ups or temporary project sites — delivered and configured on-time.</p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="bg-white p-4 h-100 text-center">
+                                    <div class="btn-square rounded-circle bg-primary text-white mx-auto mb-3" style="width:64px;height:64px;display:flex;align-items:center;justify-content:center;">
+                                        <i class="fas fa-users fa-lg"></i>
+                                    </div>
+                                    <h5 class="mb-2">Bulk Deployment for Corporates</h5>
+                                    <p class="small mb-0">Mass rollouts with asset tagging, imaging and logistics support for enterprise onboarding projects.</p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="bg-white p-4 h-100 text-center">
+                                    <div class="btn-square rounded-circle bg-primary text-white mx-auto mb-3" style="width:64px;height:64px;display:flex;align-items:center;justify-content:center;">
+                                        <i class="fas fa-clock fa-lg"></i>
+                                    </div>
+                                    <h5 class="mb-2">Short‑term & Long‑term Options</h5>
+                                    <p class="small mb-0">Flexible terms: daily, weekly, monthly or multi-year leases to match project timelines and budgets.</p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="bg-white p-4 h-100 text-center">
+                                    <div class="btn-square rounded-circle bg-primary text-white mx-auto mb-3" style="width:64px;height:64px;display:flex;align-items:center;justify-content:center;">
+                                        <i class="fas fa-cogs fa-lg"></i>
+                                    </div>
+                                    <h5 class="mb-2">Pre‑configured Systems</h5>
+                                    <p class="small mb-0">Systems imaged with required OS and apps so devices are plug-and-play on delivery.</p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="bg-white p-4 h-100 text-center">
+                                    <div class="btn-square rounded-circle bg-primary text-white mx-auto mb-3" style="width:64px;height:64px;display:flex;align-items:center;justify-content:center;">
+                                        <i class="fas fa-sync-alt fa-lg"></i>
+                                    </div>
+                                    <h5 class="mb-2">Upgrade & Replacement Options</h5>
+                                    <p class="small mb-0">Easily upgrade leased hardware mid-term or swap units as project needs change.</p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="bg-white p-4 h-100 text-center">
+                                    <div class="btn-square rounded-circle bg-primary text-white mx-auto mb-3" style="width:64px;height:64px;display:flex;align-items:center;justify-content:center;">
+                                        <i class="fas fa-hands-helping fa-lg"></i>
+                                    </div>
+                                    <h5 class="mb-2">On‑site Installation & Maintenance</h5>
+                                    <p class="small mb-0">Professional on-site installation, setup and ongoing maintenance with technical assistance included.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-light p-4 mb-4">
+                            <h4 class="mb-3">Why choose our leasing?</h4>
+                            <div class="row g-3">
+                                <div class="col-md-4">
+                                    <div class="bg-white p-3 h-100">
+                                        <h6 class="text-primary">Cost Effective</h6>
+                                        <p class="small mb-0">Reduce upfront capital expenditure with predictable rental fees.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="bg-white p-3 h-100">
+                                        <h6 class="text-primary">Rapid Deployment</h6>
+                                        <p class="small mb-0">Quickly provision pre-configured systems for immediate use.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="bg-white p-3 h-100">
+                                        <h6 class="text-primary">Full Support</h6>
+                                        <p class="small mb-0">On-site setup, maintenance, and continuous technical assistance.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3 class="mb-3">Get started</h3>
+                        <p class="mb-4">For custom packages, availability, and pricing, contact our leasing team. We can provide short-term rentals for events or long-term enterprise leasing with upgrade and replacement options tailored to your needs.</p>
+
+                        <a href="quote.html" class="btn btn-primary">Request a Quote</a>
                     </div>
                 </div>
 
-                <!-- ROG Router -->
-                <div class="col-lg-6 col-md-12 mb-4">
-                    <div class="product-card h-100">
-                        <div class="product-image">
-                            <img src="leasing-product-image/ROG router.png" alt="ASUS ROG Router"
-                                style="width: 100%; height: 100%; object-fit: contain; border-radius: 8px;">
+                <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="bg-light p-4 mb-4">
+                        <h4 class="mb-3">Leasing Inquiry</h4>
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-phone text-primary me-3"></i>
+                            <div>
+                                <strong>Contact</strong><br>
+                                <span>7899497979</span>
+                            </div>
                         </div>
-                        <div class="price-tag">Lease Available</div>
-                        <h3 class="product-title">ASUS ROG Gaming Router</h3>
-                        <p class="product-description">
-                            The ASUS ROG gaming router is engineered for ultra-fast, low-latency networking designed
-                            specifically for
-                            high-performance environments. Built with advanced Wi-Fi technology, intelligent traffic
-                            prioritization,
-                            and gaming acceleration features, it delivers stable, high-speed connectivity ideal for
-                            gamers,
-                            creators, and power users who demand reliable network performance.
-                        </p>
-                        <button class="btn btn-lease">Request Lease Quote</button>
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-envelope text-primary me-3"></i>
+                            <div>
+                                <strong>Email</strong><br>
+                                <span>leasing@tlg.net.in</span>
+                            </div>
+                        </div>
+                        <div class="alert alert-primary">
+                            <small><i class="fas fa-info-circle me-2"></i>Flexible terms and same-day availability for common items</small>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <!-- Switches Section -->
-    <div class="container-fluid py-6 bg-light">
-        <div class="container">
-            <div class="category-header">
-                <h2 class="category-title">Enterprise Network Switches</h2>
-                <p class="category-desc">Advanced switching solutions for modern network infrastructure</p>
-                <div class="section-divider"></div>
-            </div>
-
-            <div class="row">
-                <!-- Grandstream Layer-3 Switch -->
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="product-card h-100">
-                        <div class="product-image">
-                            <img src="leasing-product-image/Grandstream Networks Layer-3 Managed Switch.png"
-                                alt="Grandstream Layer-3 Switch"
-                                style="width: 100%; height: 100%; object-fit: contain; border-radius: 8px;">
-                        </div>
-                        <div class="price-tag">Lease Available</div>
-                        <h3 class="product-title">Grandstream Networks Layer-3 Managed Switch</h3>
-                        <p class="product-description">
-                            The Grandstream Layer-3 managed switch is built for high-performance enterprise networking,
-                            combining advanced
-                            routing intelligence with reliable switching capacity. Designed for business networks,
-                            campuses, and ISP environments,
-                            it enables efficient traffic control, scalable infrastructure growth, and secure multi-VLAN
-                            communication.
-                        </p>
-                        <button class="btn btn-lease">Request Lease Quote</button>
+                    <div class="bg-primary p-4 text-white mb-4">
+                        <h4 class="mb-3">Request Leasing Quote</h4>
+                        <p class="mb-3">Need a tailored leasing plan? Get a personalized quote for your requirements.</p>
+                        <a href="quote.html" class="btn btn-light">Request Quote</a>
                     </div>
-                </div>
 
-                <!-- Cisco Catalyst 9200 -->
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="product-card h-100">
-                        <div class="product-image">
-                            <img src="leasing-product-image/Cisco Catalyst 9200 Series Core Switch.png"
-                                alt="Cisco Catalyst 9200"
-                                style="width: 100%; height: 100%; object-fit: contain; border-radius: 8px;">
-                        </div>
-                        <div class="price-tag">Lease Available</div>
-                        <h3 class="product-title">Cisco Catalyst 9200 Series Core Switch</h3>
-                        <p class="product-description">
-                            The Cisco Catalyst 9200 core switch is designed to deliver enterprise-class performance,
-                            security, and reliability
-                            for modern network infrastructures. Built for business and campus environments, it provides
-                            intelligent switching,
-                            advanced management capabilities, and scalable connectivity — making it an ideal foundation
-                            for stable, high-speed core networking.
-                        </p>
-                        <button class="btn btn-lease">Request Lease Quote</button>
-                    </div>
-                </div>
-
-                <!-- Cisco Catalyst 1300 -->
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="product-card h-100">
-                        <div class="product-image">
-                            <img src="leasing-product-image/Cisco Catalyst 1300 Series Managed Switch.png"
-                                alt="Cisco Catalyst 1300"
-                                style="width: 100%; height: 100%; object-fit: contain; border-radius: 8px;">
-                        </div>
-                        <div class="price-tag">Lease Available</div>
-                        <h3 class="product-title">Cisco Catalyst 1300 Series Managed Switch</h3>
-                        <p class="product-description">
-                            The Cisco Catalyst 1300 Series switch is built to deliver reliable, high-performance
-                            networking for modern
-                            business environments. Designed for small to mid-sized enterprise deployments, it combines
-                            intelligent switching,
-                            enhanced security, and scalable connectivity to ensure smooth data flow and simplified
-                            network management.
-                        </p>
-                        <button class="btn btn-lease">Request Lease Quote</button>
-                    </div>
-                </div>
-
-                <!-- Cisco Catalyst 1000 -->
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="product-card h-100">
-                        <div class="product-image">
-                            <img src="leasing-product-image/Cisco Catalyst 1000 Series Access Switch.png"
-                                alt="Cisco Catalyst 1000"
-                                style="width: 100%; height: 100%; object-fit: contain; border-radius: 8px;">
-                        </div>
-                        <div class="price-tag">Lease Available</div>
-                        <h3 class="product-title">Cisco Catalyst 1000 Series Access Switch</h3>
-                        <p class="product-description">
-                            The Cisco Catalyst 1000 Series switch is designed to provide dependable, enterprise-grade
-                            connectivity
-                            for small to mid-sized business networks. Built for simplicity and performance, it delivers
-                            secure switching,
-                            efficient traffic handling, and scalable deployment — making it an ideal foundation for
-                            reliable everyday network operations.
-                        </p>
-                        <button class="btn btn-lease">Request Lease Quote</button>
-                    </div>
-                </div>
-
-                <!-- D-Link PoE Switch -->
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="product-card h-100">
-                        <div class="product-image">
-                            <img src="leasing-product-image/D-Link PoE Network Switch.png" alt="D-Link PoE Switch"
-                                style="width: 100%; height: 100%; object-fit: contain; border-radius: 8px;">
-                        </div>
-                        <div class="price-tag">Lease Available</div>
-                        <h3 class="product-title">D-Link PoE Network Switch</h3>
-                        <p class="product-description">
-                            D-Link PoE switches are designed to simplify modern network deployments by delivering both
-                            power and data
-                            through a single Ethernet cable. Ideal for IP cameras, wireless access points, VoIP phones,
-                            and other powered devices,
-                            these switches provide reliable connectivity, efficient installation, and scalable
-                            performance.
-                        </p>
-                        <button class="btn btn-lease">Request Lease Quote</button>
-                    </div>
-                </div>
-
-                <!-- D-Link Non-PoE Switch -->
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="product-card h-100">
-                        <div class="product-image">
-                            <img src="leasing-product-image/D-Link Non-PoE Network Switch.png"
-                                alt="D-Link Non-PoE Switch"
-                                style="width: 100%; height: 100%; object-fit: contain; border-radius: 8px;">
-                        </div>
-                        <div class="price-tag">Lease Available</div>
-                        <h3 class="product-title">D-Link Non-PoE Network Switch</h3>
-                        <p class="product-description">
-                            D-Link non-PoE network switches provide reliable, high-speed wired connectivity for everyday
-                            business networking
-                            without power delivery over Ethernet. Designed for simplicity and stable performance, they
-                            are ideal for connecting
-                            computers, servers, printers, and other network devices.
-                        </p>
-                        <button class="btn btn-lease">Request Lease Quote</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Security & Wireless Section -->
-    <div class="container-fluid py-6">
-        <div class="container">
-            <div class="category-header">
-                <h2 class="category-title">Security & Wireless Solutions</h2>
-                <p class="category-desc">Advanced security appliances and wireless access points</p>
-                <div class="section-divider"></div>
-            </div>
-
-            <div class="row">
-                <!-- Cisco Firepower 1140 -->
-                <div class="col-lg-6 col-md-12 mb-4">
-                    <div class="product-card h-100">
-                        <div class="product-image">
-                            <img src="leasing-product-image/Cisco Firepower 1140 Firewall.png"
-                                alt="Cisco Firepower 1140"
-                                style="width: 100%; height: 100%; object-fit: contain; border-radius: 8px;">
-                        </div>
-                        <div class="price-tag">Lease Available</div>
-                        <h3 class="product-title">Cisco Firepower 1140 Firewall</h3>
-                        <p class="product-description">
-                            The Cisco 1140 firewall is a high-performance next-generation security appliance designed to
-                            protect modern
-                            business networks from evolving cyber threats. Built for branch offices and enterprise
-                            deployments, it combines
-                            advanced threat defense, intelligent traffic inspection, and reliable performance to ensure
-                            secure,
-                            uninterrupted connectivity across critical infrastructure.
-                        </p>
-                        <button class="btn btn-lease">Request Lease Quote</button>
-                    </div>
-                </div>
-
-                <!-- Cisco Meraki MR45 -->
-                <div class="col-lg-6 col-md-12 mb-4">
-                    <div class="product-card h-100">
-                        <div class="product-image">
-                            <img src="leasing-product-image/Cisco Meraki MR45 Access Point.png" alt="Cisco Meraki MR45"
-                                style="width: 100%; height: 100%; object-fit: contain; border-radius: 8px;">
-                        </div>
-                        <div class="price-tag">Lease Available</div>
-                        <h3 class="product-title">Cisco Meraki MR45 Access Point with Cloud Controller</h3>
-                        <p class="product-description">
-                            The Cisco Meraki MR45 access point delivers high-performance, cloud-managed wireless
-                            connectivity for modern
-                            business environments. Designed for dense office and enterprise deployments, it combines
-                            fast Wi-Fi performance,
-                            intelligent traffic management, and centralized cloud control — enabling simplified
-                            administration, strong security,
-                            and scalable wireless networking.
-                        </p>
-                        <button class="btn btn-lease">Request Lease Quote</button>
+                    <div class="bg-light p-4">
+                        <h4 class="mb-3">Related Services</h4>
+                        <a href="it-equipment-rental.html" class="d-flex align-items-center mb-2 text-decoration-none">
+                            <i class="fas fa-arrow-right text-primary me-2"></i>
+                            <span>IT Equipment Rental</span>
+                        </a>
+                        <a href="service-it-infrastructure.html" class="d-flex align-items-center mb-2 text-decoration-none">
+                            <i class="fas fa-arrow-right text-primary me-2"></i>
+                            <span>IT Infrastructure</span>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <!-- Leasing Detail End -->
 
-    <!-- Surveillance & Storage Section -->
-    <div class="container-fluid py-6 bg-light">
+
+    <!-- Products We Lease Start -->
+    <div class="container-xxl py-5">
         <div class="container">
-            <div class="category-header">
-                <h2 class="category-title">Surveillance & Storage Systems</h2>
-                <p class="category-desc">Complete CCTV and video storage solutions</p>
-                <div class="section-divider"></div>
+            <div class="text-center mb-4">
+                <h2 class="display-6">Products We Lease</h2>
+                <p class="text-muted">Quick glance at typical items available for leasing — click to learn more or request a custom quote.</p>
             </div>
 
-            <div class="row">
-                <!-- IP Cameras -->
-                <div class="col-lg-6 col-md-12 mb-4">
-                    <div class="product-card h-100">
-                        <div class="product-image">
-                            <img src="leasing-product-image/IP Cameras.png" alt="IP Cameras"
-                                style="width: 100%; height: 100%; object-fit: contain; border-radius: 8px;">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="img/portfolio-1.jpg" class="card-img-top" alt="Laptops and Ultrabooks">
+                        <div class="card-body">
+                            <h5 class="card-title">Laptops & Ultrabooks</h5>
+                            <p class="card-text small mb-0">Lightweight thin laptops and powerful notebooks for developers, staff and events — available pre-configured with OS and software.</p>
                         </div>
-                        <div class="price-tag">Lease Available</div>
-                        <h3 class="product-title">IP Cameras</h3>
-                        <p class="product-description">
-                            IP cameras deliver high-definition network-based video surveillance designed for modern
-                            security environments.
-                            Built with advanced imaging technology, intelligent monitoring features, and reliable
-                            network connectivity,
-                            they provide clear real-time visibility and scalable protection — making them ideal for
-                            commercial,
-                            industrial, and enterprise security deployments.
-                        </p>
-                        <button class="btn btn-lease">Request Lease Quote</button>
                     </div>
                 </div>
 
-                <!-- Hikvision NVR -->
-                <div class="col-lg-6 col-md-12 mb-4">
-                    <div class="product-card h-100">
-                        <div class="product-image">
-                            <img src="leasing-product-image/HikvisionNVR 8TB HD storage.png" alt="Hikvision NVR 8TB"
-                                style="width: 100%; height: 100%; object-fit: contain; border-radius: 8px;">
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="img/portfolio-2.jpg" class="card-img-top" alt="Desktop Workstations">
+                        <div class="card-body">
+                            <h5 class="card-title">Desktops & Workstations</h5>
+                            <p class="card-text small mb-0">High-performance desktops and workstations suitable for design, engineering or back-office operations.</p>
                         </div>
-                        <div class="price-tag">Lease Available</div>
-                        <h3 class="product-title">Hikvision NVR 8TB HD Storage</h3>
-                        <p class="product-description">
-                            An NVR with 8 TB hard drive storage provides centralized, high-capacity recording for IP
-                            surveillance systems.
-                            Designed for continuous video capture and secure playback, it enables efficient management
-                            of multiple cameras
-                            while ensuring reliable long-term storage — making it ideal for commercial, office, and
-                            enterprise security deployments.
-                        </p>
-                        <button class="btn btn-lease">Request Lease Quote</button>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="img/portfolio-3.jpg" class="card-img-top" alt="Servers & Storage">
+                        <div class="card-body">
+                            <h5 class="card-title">Servers & Storage</h5>
+                            <p class="card-text small mb-0">Rack and tower servers, SAN/NAS storage systems for short-term projects or long-term deployments.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="img/portfolio-4.jpg" class="card-img-top" alt="Networking Equipment">
+                        <div class="card-body">
+                            <h5 class="card-title">Networking Equipment</h5>
+                            <p class="card-text small mb-0">Managed switches, routers, firewalls and Wi‑Fi access points for secure, high-performance connectivity.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="img/portfolio-5.jpg" class="card-img-top" alt="CCTV NVRs & DVRs">
+                        <div class="card-body">
+                            <h5 class="card-title">NVRs & DVRs</h5>
+                            <p class="card-text small mb-0">Network and digital video recorders for surveillance projects, with optional cameras and storage bundles.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="img/portfolio-6.jpg" class="card-img-top" alt="Audio/Visual Equipment">
+                        <div class="card-body">
+                            <h5 class="card-title">Audio / Visual</h5>
+                            <p class="card-text small mb-0">Projectors, displays, sound systems and conferencing gear for meetings, events and training sessions.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <!-- Products We Lease End -->
 
-    <!-- Infrastructure & Cabling Section -->
-    <div class="container-fluid py-6">
-        <div class="container">
-            <div class="category-header">
-                <h2 class="category-title">Infrastructure & Cabling Solutions</h2>
-                <p class="category-desc">Complete networking infrastructure and cabling systems</p>
-                <div class="section-divider"></div>
-            </div>
-
-            <div class="row">
-                <!-- Network Racks -->
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="product-card h-100">
-                        <div class="product-image">
-                            <img src="leasing-product-image/Network Racks.png" alt="Network Racks"
-                                style="width: 100%; height: 100%; object-fit: contain; border-radius: 8px;">
-                        </div>
-                        <div class="price-tag">Lease Available</div>
-                        <h3 class="product-title">Network Racks</h3>
-                        <p class="product-description">
-                            Network racks provide a structured, secure enclosure for organizing networking and IT
-                            equipment such as switches,
-                            routers, patch panels, and servers. We have all types of Racks 19U, 6U, 4U, 2U available for
-                            lease.
-                        </p>
-                        <button class="btn btn-lease">Request Lease Quote</button>
-                    </div>
-                </div>
-
-                <!-- CAT6 Cable -->
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="product-card h-100">
-                        <div class="product-image">
-                            <img src="leasing-product-image/CAT6 Cable.png" alt="CAT6 Cable"
-                                style="width: 100%; height: 100%; object-fit: contain; border-radius: 8px;">
-                        </div>
-                        <div class="price-tag">Lease Available</div>
-                        <h3 class="product-title">CAT6 Cable</h3>
-                        <p class="product-description">
-                            CAT6 network cable is designed to deliver high-speed, reliable data transmission for modern
-                            Ethernet networks.
-                            Built with improved insulation and reduced interference characteristics, it supports stable
-                            connectivity for office,
-                            enterprise, and structured cabling installations.
-                        </p>
-                        <button class="btn btn-lease">Request Lease Quote</button>
-                    </div>
-                </div>
-
-                <!-- CAT6A Cable -->
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="product-card h-100">
-                        <div class="product-image">
-                            <img src="leasing-product-image/CAT6A Cable.png" alt="CAT6A Cable"
-                                style="width: 100%; height: 100%; object-fit: contain; border-radius: 8px;">
-                        </div>
-                        <div class="price-tag">Lease Available</div>
-                        <h3 class="product-title">CAT6A Cable</h3>
-                        <p class="product-description">
-                            CAT6A network cable is engineered for high-bandwidth, high-speed Ethernet environments where
-                            performance and
-                            signal integrity are critical. With enhanced shielding and reduced crosstalk, it supports
-                            stable 10-gigabit
-                            networking over longer distances.
-                        </p>
-                        <button class="btn btn-lease">Request Lease Quote</button>
-                    </div>
-                </div>
-
-                <!-- OFC Cable -->
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="product-card h-100">
-                        <div class="product-image">
-                            <img src="leasing-product-image/Optical-Fiber-Cable.png" alt="Optical Fiber Cable"
-                                style="width: 100%; height: 100%; object-fit: contain; border-radius: 8px;">
-                        </div>
-                        <div class="price-tag">Lease Available</div>
-                        <h3 class="product-title">Optical Fiber Cable (OFC)</h3>
-                        <p class="product-description">
-                            Optical Fiber Cable (OFC) is designed for ultra-high-speed, long-distance data transmission
-                            using light signals
-                            instead of electrical pulses. Built for modern networking infrastructure, it provides
-                            exceptional bandwidth,
-                            low signal loss, and strong immunity to interference.
-                        </p>
-                        <button class="btn btn-lease">Request Lease Quote</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Contact Section -->
-    <div class="contact-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="mb-4">Ready to Lease Equipment?</h2>
-                    <p class="lead mb-5">Contact us today for custom leasing solutions and competitive rates</p>
-                    <a href="contact.html" class="btn btn-contact-primary btn-lg me-4">Get Quote</a>
-                    <a href="tel:7899497979" class="btn btn-contact-secondary btn-lg">Call Now</a>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- Footer Start -->
-    <div class="container-fluid bg-dark footer pt-5 wow fadeIn" data-wow-delay="0.1s"
-        style="background: linear-gradient(180deg, #2A2A2A 0%, #1A1A1A 100%);">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="text-light mb-4">Address</h5>
-                    <p><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                    <p><i class="fa fa-phone-alt me-3"></i>7899497979</p>
-                    <p><i class="fa fa-envelope me-3"></i>Reachus@tlg.net.in</p>
-                    <div class="d-flex pt-3">
-                        <a class="btn btn-square btn-outline-secondary rounded-circle me-2" href=""><i
-                                class="fab fa-twitter"></i></a>
-                        <a class="btn btn-square btn-outline-secondary rounded-circle me-2" href=""><i
-                                class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-square btn-outline-secondary rounded-circle me-2" href=""><i
-                                class="fab fa-youtube"></i></a>
-                        <a class="btn btn-square btn-outline-secondary rounded-circle me-2" href=""><i
-                                class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="text-light mb-4">Services</h5>
-                    <a class="btn btn-link" href="">End to end IT solution</a>
-                    <a class="btn btn-link" href="">ISP</a>
-                    <a class="btn btn-link" href="">IT Equipment rental</a>
-                    <a class="btn btn-link" href="">CCTV for Events</a>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="text-light mb-4">Quick Links</h5>
-                    <a class="btn btn-link" href="">About Us</a>
-                    <a class="btn btn-link" href="">Contact Us</a>
-                    <a class="btn btn-link" href="">Our Services</a>
-                    <a class="btn btn-link" href="">Terms & Condition</a>
-                    <a class="btn btn-link" href="">Support</a>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="text-light mb-4">Newsletter</h5>
-                    <p>Stay updated with our latest leasing offers and technology solutions.</p>
-                    <div class="position-relative w-100">
-                        <input class="form-control bg-transparent border-secondary w-100 py-3 ps-4 pe-5" type="text"
-                            placeholder="Your email">
-                        <button type="button" class="btn py-2 position-absolute top-0 end-0 mt-2 me-2"
-                            style="background: var(--tlg-orange); color: white; font-weight: 600; border: none; border-radius: 4px;">SignUp</button>
-                    </div>
-                </div>
-            </div>
+    <div class="container-fluid bg-dark text-light py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-0">&copy; TLG INFOTECH. All Rights Reserved.</p>
         </div>
     </div>
     <!-- Footer End -->
 
-    <!-- Copyright Start -->
-    <div class="container-fluid py-4" style="background: #000000;">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    &copy; <a class="border-bottom" href="#">TLG INFOTECH</a>, All Right Reserved.
-                </div>
-                <div class="col-md-6 text-center text-md-end">
-                    Designed By TLG INFOTECH
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Copyright End -->
-
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
-            class="bi bi-arrow-up"></i></a>
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/isotope/isotope.pkgd.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-
-    <script>
-        // Add smooth scrolling and interactive effects
-        document.addEventListener('DOMContentLoaded', function () {
-            // Add hover effects for product cards
-            const cards = document.querySelectorAll('.product-card');
-            cards.forEach(card => {
-                card.addEventListener('mouseenter', function () {
-                    this.style.transform = 'translateY(-5px)';
-                });
-                card.addEventListener('mouseleave', function () {
-                    this.style.transform = 'translateY(0)';
-                });
-            });
-
-            // Add click handler for lease buttons
-            const leaseButtons = document.querySelectorAll('.btn-lease');
-            leaseButtons.forEach(button => {
-                button.addEventListener('click', function () {
-                    const productTitle = this.closest('.product-card').querySelector('.product-title').textContent;
-                    alert(`Lease request initiated for: ${productTitle}\n\nPlease contact us at 7899497979 for detailed quote and terms.`);
-                });
-            });
-        });
-    </script>
 </body>
 
 </html>
