@@ -151,13 +151,17 @@
             text-transform: uppercase;
             cursor: pointer;
             transition: background-color 0.3s ease;
-            width: 100%;
+            display: inline-block;
+            width: auto;
+            text-align: center;
+            text-decoration: none;
             box-sizing: border-box;
         }
 
         .btn-lease:hover {
             background: var(--tlg-orange-light);
             color: white;
+            text-decoration: none;
         }
 
         /* Section Headers */
@@ -255,66 +259,66 @@
             .hero-section {
                 padding: 60px 0;
             }
-            
+
             .hero-section h1 {
                 font-size: 2.2rem;
             }
-            
+
             .hero-section p {
                 font-size: 1rem;
                 padding: 0 20px;
             }
-            
+
             .category-title {
                 font-size: 1.8rem;
             }
-            
+
             .category-desc {
                 font-size: 1rem;
                 padding: 0 20px;
             }
-            
+
             .product-card {
                 padding: 20px;
                 margin-bottom: 25px;
             }
-            
+
             .product-image {
                 height: 200px;
                 padding: 12px;
             }
-            
+
             .product-title {
                 font-size: 1.1rem;
                 margin-bottom: 12px;
             }
-            
+
             .product-description {
                 font-size: 0.9rem;
                 margin-bottom: 18px;
             }
-            
+
             .btn-lease {
                 padding: 14px 24px;
                 font-size: 0.85rem;
             }
-            
+
             .container-fluid.py-6 {
                 padding: 40px 0;
             }
-            
+
             .category-header {
                 margin: 40px 0 30px 0;
             }
-            
+
             .contact-section {
                 padding: 40px 0;
             }
-            
+
             .contact-section h2 {
                 font-size: 1.8rem;
             }
-            
+
             .btn-contact-primary,
             .btn-contact-secondary {
                 display: block;
@@ -328,49 +332,49 @@
             .hero-section h1 {
                 font-size: 1.9rem;
             }
-            
+
             .category-title {
                 font-size: 1.6rem;
             }
-            
+
             .product-image {
                 height: 180px;
                 padding: 10px;
             }
-            
+
             .product-card {
                 padding: 16px;
                 margin-bottom: 20px;
             }
-            
+
+            .btn-lease {
+                width: 100%;
+                display: block;
+            }
+
             .product-title {
                 font-size: 1rem;
                 margin-bottom: 10px;
             }
-            
+
             .product-description {
                 font-size: 0.85rem;
                 margin-bottom: 15px;
             }
-            
+
             .btn-lease {
                 padding: 12px 20px;
                 font-size: 0.8rem;
+                width: 100%;
             }
-            
+
             .price-tag {
                 font-size: 0.75rem;
                 padding: 5px 10px;
             }
         }
 
-        /* Remove excessive animations */
-        * {
-            transition: none !important;
-            animation: none !important;
-        }
-
-        /* Only keep essential hover effects */
+        /* Remove excessive animations and keep only essential transitions */
         .product-card {
             transition: box-shadow 0.2s ease;
         }
@@ -378,7 +382,14 @@
         .btn-lease,
         .btn-contact-primary,
         .btn-contact-secondary {
-            transition: background-color 0.2s ease;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+
+        .btn-lease:focus,
+        .btn-contact-primary:focus,
+        .btn-contact-secondary:focus {
+            outline: 2px solid var(--tlg-orange);
+            outline-offset: 2px;
         }
     </style>
 </head>
@@ -482,14 +493,18 @@
                 <div class="col-lg-6 col-md-12 mb-4">
                     <div class="product-card h-100">
                         <div class="product-image">
-                            <img src="leasing-product-image/MikroTik CCR2004-1G-12S+2XS.png" alt="MikroTik CCR2004" style="width: 100%; height: 100%; object-fit: contain; border-radius: 8px;">
+                            <img src="leasing-product-image/MikroTik CCR2004-1G-12S+2XS.png" alt="MikroTik CCR2004"
+                                style="width: 100%; height: 100%; object-fit: contain; border-radius: 8px;">
                         </div>
                         <div class="price-tag">Lease Available</div>
                         <h3 class="product-title">MikroTik CCR2004-1G-12S+2XS</h3>
                         <p class="product-description">
-                            The MikroTik CCR2004-1G-12S+2XS is a high-performance enterprise cloud core router built for demanding networks. 
-                            Designed for ISPs, data centers, and large business environments, it delivers exceptional routing power, 
-                            ultra-fast fiber connectivity, and reliable operation — making it ideal for backbone aggregation, 
+                            The MikroTik CCR2004-1G-12S+2XS is a high-performance enterprise cloud core router built for
+                            demanding networks.
+                            Designed for ISPs, data centers, and large business environments, it delivers exceptional
+                            routing power,
+                            ultra-fast fiber connectivity, and reliable operation — making it ideal for backbone
+                            aggregation,
                             high-traffic routing, and scalable infrastructure deployments.
                         </p>
                         <button class="btn btn-lease">Request Lease Quote</button>
@@ -500,14 +515,18 @@
                 <div class="col-lg-6 col-md-12 mb-4">
                     <div class="product-card h-100">
                         <div class="product-image">
-                            <img src="leasing-product-image/ROG router.png" alt="ASUS ROG Router" style="width: 100%; height: 100%; object-fit: contain; border-radius: 8px;">
+                            <img src="leasing-product-image/ROG router.png" alt="ASUS ROG Router"
+                                style="width: 100%; height: 100%; object-fit: contain; border-radius: 8px;">
                         </div>
                         <div class="price-tag">Lease Available</div>
                         <h3 class="product-title">ASUS ROG Gaming Router</h3>
                         <p class="product-description">
-                            The ASUS ROG gaming router is engineered for ultra-fast, low-latency networking designed specifically for 
-                            high-performance environments. Built with advanced Wi-Fi technology, intelligent traffic prioritization, 
-                            and gaming acceleration features, it delivers stable, high-speed connectivity ideal for gamers, 
+                            The ASUS ROG gaming router is engineered for ultra-fast, low-latency networking designed
+                            specifically for
+                            high-performance environments. Built with advanced Wi-Fi technology, intelligent traffic
+                            prioritization,
+                            and gaming acceleration features, it delivers stable, high-speed connectivity ideal for
+                            gamers,
                             creators, and power users who demand reliable network performance.
                         </p>
                         <button class="btn btn-lease">Request Lease Quote</button>
@@ -531,14 +550,19 @@
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="product-card h-100">
                         <div class="product-image">
-                            <img src="leasing-product-image/Grandstream Networks Layer-3 Managed Switch.png" alt="Grandstream Layer-3 Switch" style="width: 100%; height: 100%; object-fit: contain; border-radius: 8px;">
+                            <img src="leasing-product-image/Grandstream Networks Layer-3 Managed Switch.png"
+                                alt="Grandstream Layer-3 Switch"
+                                style="width: 100%; height: 100%; object-fit: contain; border-radius: 8px;">
                         </div>
                         <div class="price-tag">Lease Available</div>
                         <h3 class="product-title">Grandstream Networks Layer-3 Managed Switch</h3>
                         <p class="product-description">
-                            The Grandstream Layer-3 managed switch is built for high-performance enterprise networking, combining advanced 
-                            routing intelligence with reliable switching capacity. Designed for business networks, campuses, and ISP environments, 
-                            it enables efficient traffic control, scalable infrastructure growth, and secure multi-VLAN communication.
+                            The Grandstream Layer-3 managed switch is built for high-performance enterprise networking,
+                            combining advanced
+                            routing intelligence with reliable switching capacity. Designed for business networks,
+                            campuses, and ISP environments,
+                            it enables efficient traffic control, scalable infrastructure growth, and secure multi-VLAN
+                            communication.
                         </p>
                         <button class="btn btn-lease">Request Lease Quote</button>
                     </div>
@@ -548,14 +572,19 @@
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="product-card h-100">
                         <div class="product-image">
-                            <img src="leasing-product-image/Cisco Catalyst 9200 Series Core Switch.png" alt="Cisco Catalyst 9200" style="width: 100%; height: 100%; object-fit: contain; border-radius: 8px;">
+                            <img src="leasing-product-image/Cisco Catalyst 9200 Series Core Switch.png"
+                                alt="Cisco Catalyst 9200"
+                                style="width: 100%; height: 100%; object-fit: contain; border-radius: 8px;">
                         </div>
                         <div class="price-tag">Lease Available</div>
                         <h3 class="product-title">Cisco Catalyst 9200 Series Core Switch</h3>
                         <p class="product-description">
-                            The Cisco Catalyst 9200 core switch is designed to deliver enterprise-class performance, security, and reliability 
-                            for modern network infrastructures. Built for business and campus environments, it provides intelligent switching, 
-                            advanced management capabilities, and scalable connectivity — making it an ideal foundation for stable, high-speed core networking.
+                            The Cisco Catalyst 9200 core switch is designed to deliver enterprise-class performance,
+                            security, and reliability
+                            for modern network infrastructures. Built for business and campus environments, it provides
+                            intelligent switching,
+                            advanced management capabilities, and scalable connectivity — making it an ideal foundation
+                            for stable, high-speed core networking.
                         </p>
                         <button class="btn btn-lease">Request Lease Quote</button>
                     </div>
@@ -565,14 +594,19 @@
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="product-card h-100">
                         <div class="product-image">
-                            <img src="leasing-product-image/Cisco Catalyst 1300 Series Managed Switch.png" alt="Cisco Catalyst 1300" style="width: 100%; height: 100%; object-fit: contain; border-radius: 8px;">
+                            <img src="leasing-product-image/Cisco Catalyst 1300 Series Managed Switch.png"
+                                alt="Cisco Catalyst 1300"
+                                style="width: 100%; height: 100%; object-fit: contain; border-radius: 8px;">
                         </div>
                         <div class="price-tag">Lease Available</div>
                         <h3 class="product-title">Cisco Catalyst 1300 Series Managed Switch</h3>
                         <p class="product-description">
-                            The Cisco Catalyst 1300 Series switch is built to deliver reliable, high-performance networking for modern 
-                            business environments. Designed for small to mid-sized enterprise deployments, it combines intelligent switching, 
-                            enhanced security, and scalable connectivity to ensure smooth data flow and simplified network management.
+                            The Cisco Catalyst 1300 Series switch is built to deliver reliable, high-performance
+                            networking for modern
+                            business environments. Designed for small to mid-sized enterprise deployments, it combines
+                            intelligent switching,
+                            enhanced security, and scalable connectivity to ensure smooth data flow and simplified
+                            network management.
                         </p>
                         <button class="btn btn-lease">Request Lease Quote</button>
                     </div>
@@ -582,14 +616,19 @@
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="product-card h-100">
                         <div class="product-image">
-                            <img src="leasing-product-image/Cisco Catalyst 1000 Series Access Switch.png" alt="Cisco Catalyst 1000" style="width: 100%; height: 100%; object-fit: contain; border-radius: 8px;">
+                            <img src="leasing-product-image/Cisco Catalyst 1000 Series Access Switch.png"
+                                alt="Cisco Catalyst 1000"
+                                style="width: 100%; height: 100%; object-fit: contain; border-radius: 8px;">
                         </div>
                         <div class="price-tag">Lease Available</div>
                         <h3 class="product-title">Cisco Catalyst 1000 Series Access Switch</h3>
                         <p class="product-description">
-                            The Cisco Catalyst 1000 Series switch is designed to provide dependable, enterprise-grade connectivity 
-                            for small to mid-sized business networks. Built for simplicity and performance, it delivers secure switching, 
-                            efficient traffic handling, and scalable deployment — making it an ideal foundation for reliable everyday network operations.
+                            The Cisco Catalyst 1000 Series switch is designed to provide dependable, enterprise-grade
+                            connectivity
+                            for small to mid-sized business networks. Built for simplicity and performance, it delivers
+                            secure switching,
+                            efficient traffic handling, and scalable deployment — making it an ideal foundation for
+                            reliable everyday network operations.
                         </p>
                         <button class="btn btn-lease">Request Lease Quote</button>
                     </div>
@@ -599,14 +638,18 @@
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="product-card h-100">
                         <div class="product-image">
-                            <img src="leasing-product-image/D-Link PoE Network Switch.png" alt="D-Link PoE Switch" style="width: 100%; height: 100%; object-fit: contain; border-radius: 8px;">
+                            <img src="leasing-product-image/D-Link PoE Network Switch.png" alt="D-Link PoE Switch"
+                                style="width: 100%; height: 100%; object-fit: contain; border-radius: 8px;">
                         </div>
                         <div class="price-tag">Lease Available</div>
                         <h3 class="product-title">D-Link PoE Network Switch</h3>
                         <p class="product-description">
-                            D-Link PoE switches are designed to simplify modern network deployments by delivering both power and data 
-                            through a single Ethernet cable. Ideal for IP cameras, wireless access points, VoIP phones, and other powered devices, 
-                            these switches provide reliable connectivity, efficient installation, and scalable performance.
+                            D-Link PoE switches are designed to simplify modern network deployments by delivering both
+                            power and data
+                            through a single Ethernet cable. Ideal for IP cameras, wireless access points, VoIP phones,
+                            and other powered devices,
+                            these switches provide reliable connectivity, efficient installation, and scalable
+                            performance.
                         </p>
                         <button class="btn btn-lease">Request Lease Quote</button>
                     </div>
@@ -616,13 +659,17 @@
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="product-card h-100">
                         <div class="product-image">
-                            <img src="leasing-product-image/D-Link Non-PoE Network Switch.png" alt="D-Link Non-PoE Switch" style="width: 100%; height: 100%; object-fit: contain; border-radius: 8px;">
+                            <img src="leasing-product-image/D-Link Non-PoE Network Switch.png"
+                                alt="D-Link Non-PoE Switch"
+                                style="width: 100%; height: 100%; object-fit: contain; border-radius: 8px;">
                         </div>
                         <div class="price-tag">Lease Available</div>
                         <h3 class="product-title">D-Link Non-PoE Network Switch</h3>
                         <p class="product-description">
-                            D-Link non-PoE network switches provide reliable, high-speed wired connectivity for everyday business networking 
-                            without power delivery over Ethernet. Designed for simplicity and stable performance, they are ideal for connecting 
+                            D-Link non-PoE network switches provide reliable, high-speed wired connectivity for everyday
+                            business networking
+                            without power delivery over Ethernet. Designed for simplicity and stable performance, they
+                            are ideal for connecting
                             computers, servers, printers, and other network devices.
                         </p>
                         <button class="btn btn-lease">Request Lease Quote</button>
@@ -646,14 +693,19 @@
                 <div class="col-lg-6 col-md-12 mb-4">
                     <div class="product-card h-100">
                         <div class="product-image">
-                            <img src="leasing-product-image/Cisco Firepower 1140 Firewall.png" alt="Cisco Firepower 1140" style="width: 100%; height: 100%; object-fit: contain; border-radius: 8px;">
+                            <img src="leasing-product-image/Cisco Firepower 1140 Firewall.png"
+                                alt="Cisco Firepower 1140"
+                                style="width: 100%; height: 100%; object-fit: contain; border-radius: 8px;">
                         </div>
                         <div class="price-tag">Lease Available</div>
                         <h3 class="product-title">Cisco Firepower 1140 Firewall</h3>
                         <p class="product-description">
-                            The Cisco 1140 firewall is a high-performance next-generation security appliance designed to protect modern 
-                            business networks from evolving cyber threats. Built for branch offices and enterprise deployments, it combines 
-                            advanced threat defense, intelligent traffic inspection, and reliable performance to ensure secure, 
+                            The Cisco 1140 firewall is a high-performance next-generation security appliance designed to
+                            protect modern
+                            business networks from evolving cyber threats. Built for branch offices and enterprise
+                            deployments, it combines
+                            advanced threat defense, intelligent traffic inspection, and reliable performance to ensure
+                            secure,
                             uninterrupted connectivity across critical infrastructure.
                         </p>
                         <button class="btn btn-lease">Request Lease Quote</button>
@@ -664,14 +716,18 @@
                 <div class="col-lg-6 col-md-12 mb-4">
                     <div class="product-card h-100">
                         <div class="product-image">
-                            <img src="leasing-product-image/Cisco Meraki MR45 Access Point.png" alt="Cisco Meraki MR45" style="width: 100%; height: 100%; object-fit: contain; border-radius: 8px;">
+                            <img src="leasing-product-image/Cisco Meraki MR45 Access Point.png" alt="Cisco Meraki MR45"
+                                style="width: 100%; height: 100%; object-fit: contain; border-radius: 8px;">
                         </div>
                         <div class="price-tag">Lease Available</div>
                         <h3 class="product-title">Cisco Meraki MR45 Access Point with Cloud Controller</h3>
                         <p class="product-description">
-                            The Cisco Meraki MR45 access point delivers high-performance, cloud-managed wireless connectivity for modern 
-                            business environments. Designed for dense office and enterprise deployments, it combines fast Wi-Fi performance, 
-                            intelligent traffic management, and centralized cloud control — enabling simplified administration, strong security, 
+                            The Cisco Meraki MR45 access point delivers high-performance, cloud-managed wireless
+                            connectivity for modern
+                            business environments. Designed for dense office and enterprise deployments, it combines
+                            fast Wi-Fi performance,
+                            intelligent traffic management, and centralized cloud control — enabling simplified
+                            administration, strong security,
                             and scalable wireless networking.
                         </p>
                         <button class="btn btn-lease">Request Lease Quote</button>
@@ -695,14 +751,18 @@
                 <div class="col-lg-6 col-md-12 mb-4">
                     <div class="product-card h-100">
                         <div class="product-image">
-                            <img src="leasing-product-image/IP Cameras.png" alt="IP Cameras" style="width: 100%; height: 100%; object-fit: contain; border-radius: 8px;">
+                            <img src="leasing-product-image/IP Cameras.png" alt="IP Cameras"
+                                style="width: 100%; height: 100%; object-fit: contain; border-radius: 8px;">
                         </div>
                         <div class="price-tag">Lease Available</div>
                         <h3 class="product-title">IP Cameras</h3>
                         <p class="product-description">
-                            IP cameras deliver high-definition network-based video surveillance designed for modern security environments. 
-                            Built with advanced imaging technology, intelligent monitoring features, and reliable network connectivity, 
-                            they provide clear real-time visibility and scalable protection — making them ideal for commercial, 
+                            IP cameras deliver high-definition network-based video surveillance designed for modern
+                            security environments.
+                            Built with advanced imaging technology, intelligent monitoring features, and reliable
+                            network connectivity,
+                            they provide clear real-time visibility and scalable protection — making them ideal for
+                            commercial,
                             industrial, and enterprise security deployments.
                         </p>
                         <button class="btn btn-lease">Request Lease Quote</button>
@@ -713,14 +773,18 @@
                 <div class="col-lg-6 col-md-12 mb-4">
                     <div class="product-card h-100">
                         <div class="product-image">
-                            <img src="leasing-product-image/HikvisionNVR 8TB HD storage.png" alt="Hikvision NVR 8TB" style="width: 100%; height: 100%; object-fit: contain; border-radius: 8px;">
+                            <img src="leasing-product-image/HikvisionNVR 8TB HD storage.png" alt="Hikvision NVR 8TB"
+                                style="width: 100%; height: 100%; object-fit: contain; border-radius: 8px;">
                         </div>
                         <div class="price-tag">Lease Available</div>
                         <h3 class="product-title">Hikvision NVR 8TB HD Storage</h3>
                         <p class="product-description">
-                            An NVR with 8 TB hard drive storage provides centralized, high-capacity recording for IP surveillance systems. 
-                            Designed for continuous video capture and secure playback, it enables efficient management of multiple cameras 
-                            while ensuring reliable long-term storage — making it ideal for commercial, office, and enterprise security deployments.
+                            An NVR with 8 TB hard drive storage provides centralized, high-capacity recording for IP
+                            surveillance systems.
+                            Designed for continuous video capture and secure playback, it enables efficient management
+                            of multiple cameras
+                            while ensuring reliable long-term storage — making it ideal for commercial, office, and
+                            enterprise security deployments.
                         </p>
                         <button class="btn btn-lease">Request Lease Quote</button>
                     </div>
@@ -743,13 +807,16 @@
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="product-card h-100">
                         <div class="product-image">
-                            <img src="leasing-product-image/Network Racks.png" alt="Network Racks" style="width: 100%; height: 100%; object-fit: contain; border-radius: 8px;">
+                            <img src="leasing-product-image/Network Racks.png" alt="Network Racks"
+                                style="width: 100%; height: 100%; object-fit: contain; border-radius: 8px;">
                         </div>
                         <div class="price-tag">Lease Available</div>
                         <h3 class="product-title">Network Racks</h3>
                         <p class="product-description">
-                            Network racks provide a structured, secure enclosure for organizing networking and IT equipment such as switches, 
-                            routers, patch panels, and servers. We have all types of Racks 19U, 6U, 4U, 2U available for lease.
+                            Network racks provide a structured, secure enclosure for organizing networking and IT
+                            equipment such as switches,
+                            routers, patch panels, and servers. We have all types of Racks 19U, 6U, 4U, 2U available for
+                            lease.
                         </p>
                         <button class="btn btn-lease">Request Lease Quote</button>
                     </div>
@@ -759,13 +826,16 @@
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="product-card h-100">
                         <div class="product-image">
-                            <img src="leasing-product-image/CAT6 Cable.png" alt="CAT6 Cable" style="width: 100%; height: 100%; object-fit: contain; border-radius: 8px;">
+                            <img src="leasing-product-image/CAT6 Cable.png" alt="CAT6 Cable"
+                                style="width: 100%; height: 100%; object-fit: contain; border-radius: 8px;">
                         </div>
                         <div class="price-tag">Lease Available</div>
                         <h3 class="product-title">CAT6 Cable</h3>
                         <p class="product-description">
-                            CAT6 network cable is designed to deliver high-speed, reliable data transmission for modern Ethernet networks. 
-                            Built with improved insulation and reduced interference characteristics, it supports stable connectivity for office, 
+                            CAT6 network cable is designed to deliver high-speed, reliable data transmission for modern
+                            Ethernet networks.
+                            Built with improved insulation and reduced interference characteristics, it supports stable
+                            connectivity for office,
                             enterprise, and structured cabling installations.
                         </p>
                         <button class="btn btn-lease">Request Lease Quote</button>
@@ -776,13 +846,16 @@
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="product-card h-100">
                         <div class="product-image">
-                            <img src="leasing-product-image/CAT6A Cable.png" alt="CAT6A Cable" style="width: 100%; height: 100%; object-fit: contain; border-radius: 8px;">
+                            <img src="leasing-product-image/CAT6A Cable.png" alt="CAT6A Cable"
+                                style="width: 100%; height: 100%; object-fit: contain; border-radius: 8px;">
                         </div>
                         <div class="price-tag">Lease Available</div>
                         <h3 class="product-title">CAT6A Cable</h3>
                         <p class="product-description">
-                            CAT6A network cable is engineered for high-bandwidth, high-speed Ethernet environments where performance and 
-                            signal integrity are critical. With enhanced shielding and reduced crosstalk, it supports stable 10-gigabit 
+                            CAT6A network cable is engineered for high-bandwidth, high-speed Ethernet environments where
+                            performance and
+                            signal integrity are critical. With enhanced shielding and reduced crosstalk, it supports
+                            stable 10-gigabit
                             networking over longer distances.
                         </p>
                         <button class="btn btn-lease">Request Lease Quote</button>
@@ -793,13 +866,16 @@
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="product-card h-100">
                         <div class="product-image">
-                            <img src="leasing-product-image/Optical-Fiber-Cable.png" alt="Optical Fiber Cable" style="width: 100%; height: 100%; object-fit: contain; border-radius: 8px;">
+                            <img src="leasing-product-image/Optical-Fiber-Cable.png" alt="Optical Fiber Cable"
+                                style="width: 100%; height: 100%; object-fit: contain; border-radius: 8px;">
                         </div>
                         <div class="price-tag">Lease Available</div>
                         <h3 class="product-title">Optical Fiber Cable (OFC)</h3>
                         <p class="product-description">
-                            Optical Fiber Cable (OFC) is designed for ultra-high-speed, long-distance data transmission using light signals 
-                            instead of electrical pulses. Built for modern networking infrastructure, it provides exceptional bandwidth, 
+                            Optical Fiber Cable (OFC) is designed for ultra-high-speed, long-distance data transmission
+                            using light signals
+                            instead of electrical pulses. Built for modern networking infrastructure, it provides
+                            exceptional bandwidth,
                             low signal loss, and strong immunity to interference.
                         </p>
                         <button class="btn btn-lease">Request Lease Quote</button>
@@ -865,8 +941,8 @@
                     <div class="position-relative w-100">
                         <input class="form-control bg-transparent border-secondary w-100 py-3 ps-4 pe-5" type="text"
                             placeholder="Your email">
-                        <button type="button"
-                            class="btn py-2 position-absolute top-0 end-0 mt-2 me-2" style="background: var(--tlg-orange); color: white; font-weight: 600; border: none; border-radius: 4px;">SignUp</button>
+                        <button type="button" class="btn py-2 position-absolute top-0 end-0 mt-2 me-2"
+                            style="background: var(--tlg-orange); color: white; font-weight: 600; border: none; border-radius: 4px;">SignUp</button>
                     </div>
                 </div>
             </div>
@@ -909,14 +985,14 @@
 
     <script>
         // Add smooth scrolling and interactive effects
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // Add hover effects for product cards
             const cards = document.querySelectorAll('.product-card');
             cards.forEach(card => {
-                card.addEventListener('mouseenter', function() {
+                card.addEventListener('mouseenter', function () {
                     this.style.transform = 'translateY(-5px)';
                 });
-                card.addEventListener('mouseleave', function() {
+                card.addEventListener('mouseleave', function () {
                     this.style.transform = 'translateY(0)';
                 });
             });
@@ -924,7 +1000,7 @@
             // Add click handler for lease buttons
             const leaseButtons = document.querySelectorAll('.btn-lease');
             leaseButtons.forEach(button => {
-                button.addEventListener('click', function() {
+                button.addEventListener('click', function () {
                     const productTitle = this.closest('.product-card').querySelector('.product-title').textContent;
                     alert(`Lease request initiated for: ${productTitle}\n\nPlease contact us at 7899497979 for detailed quote and terms.`);
                 });
