@@ -350,6 +350,23 @@ body {
     margin-left: 8px;
 }
 
+/* Use logo color (var(--primary)) instead of green only for topbar and navbar elements */
+.container-fluid.bg-dark .bg-primary,
+.navbar .bg-primary {
+    background-color: var(--primary) !important;
+}
+
+.container-fluid.bg-dark .text-primary,
+.navbar .text-primary {
+    color: var(--primary) !important;
+}
+
+/* Ensure icon circles in topbar keep white icons over logo color */
+.container-fluid.bg-dark .btn-sm-square.rounded-circle.bg-primary small,
+.navbar .btn-square.bg-primary i {
+    color: #FFFFFF !important;
+}
+
 @media (max-width: 991.98px) {
     .navbar .navbar-nav .nav-link {
         margin-right: 0;
@@ -785,6 +802,54 @@ body {
 
 .portfolio-inner:hover img {
     transform: scale(1.05);
+}
+
+/* Case studies card sizing: make product/case cards uniform */
+.case-studies-grid .card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.case-studies-grid .card-img-top {
+    width: 100%;
+    height: 220px; /* fixed visual area for images */
+    object-fit: cover;
+    object-position: center center;
+}
+
+.case-studies-grid .card-body {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: .5rem;
+}
+
+.case-studies-grid .card-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: .25rem;
+}
+
+.case-studies-grid .card-text {
+    color: var(--text-muted);
+    flex: 1 1 auto; /* allow descriptions to take available space */
+}
+
+.case-studies-grid .btn-outline-primary {
+    border-color: rgba(34,139,34,0.12);
+}
+
+@media (max-width: 991.98px) {
+    .case-studies-grid .card-img-top {
+        height: 180px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .case-studies-grid .card-img-top {
+        height: 140px;
+    }
 }
 
 /* Portfolio Content */
