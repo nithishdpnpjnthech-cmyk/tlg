@@ -398,6 +398,21 @@ body {
     color: var(--primary) !important;
 }
 
+/* Minimize Enquiry button shown on large screens */
+.nav-contact {
+    padding: .45rem 1rem !important;
+    border-radius: 6px !important;
+    font-size: 0.95rem !important;
+    line-height: 1 !important;
+}
+
+@media (max-width: 991.98px) {
+    .nav-contact {
+        padding: .35rem .75rem !important;
+        font-size: 0.9rem !important;
+    }
+}
+
 .navbar .btn:hover {
     color: #FFFFFF !important;
     background: var(--primary) !important;
